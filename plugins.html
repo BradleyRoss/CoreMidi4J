@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"
+</head>
+<body>
+<h1>Maven tasks</h1>
+<h2>Creating the Java code</h2>
+<p>The <code>native</code> keyword in Java indicates that the actual code will be accessed via
+   a JNI procedure.</p>
+<h2>Creating Java Native Interface (JNI) Headers</h2>
+<p>The <code>javah</code> will read a set of java source files and create a C header file for all
+   of the methods using the <code>native</code> keyword.  In maven, the javah program is called using
+   the <code>exec-maven-plugin</code> (groupId:org.codehaus.mojo, artifactId:exec-maven-plugin).
+   In the current pom.xml file, the procedure is marked as belonging to the <i>process-classesi</i> phase and the
+   <i>exec</i> goal.  However, the Eclipse IDE complains that the <i>process-classes</i> phase is 
+   not supported.</p>
+<p>In the pom.xml file, the plugin executes <code>javah</code> by running against the following
+   files and then putting the header file in <code>Native/CoreMidi4J/CoreMidi4J.h</code></p>
+       <ul>
+       <li>uk.co.xfactorylibrarians.coremidi4j.CoreMidiClient</li>
+       <li>uk.co.xfactorylibrarians.coremidi4j.CoreMidiDestination</li>
+       <li>uk.co.xfactorylibrarians.coremidi4j.CoreMidiDeviceProvider</li>
+       <li>uk.co.xfactorylibrarians.coremidi4j.CoreMidiInputPort</li>
+       <li>uk.co.xfactorylibrarians.coremidi4j.CoreMidiOutputPort</li>
+       <li>uk.co.xfactorylibrarians.coremidi4j.CoreMidiSource</li>
+       </ul>
+<p>If there are any changes to the header file, the C++ (.cpp) files will have to be rewritten to correspond 
+   to the new version of the header file.  It would probably be best to put notes in the code for the Java classes
+   listed above that any changes to the native methods will require rerunning javah and modifying the C++ code.  Since
+   running javah will therefore produce code that is either unchanged or incorrect, it would seem that execution of this
+   program should not be part of the pom.xml.</p>
+<h2>Compile the native C code using XCODE</h2>
+<p>The <code>exec-maven-plugin</code> plugin is also used to create the dynamic library using XCODE.  Having this 
+   repeated for each build can be justified since software updates may be needed for fixes to the
+   development environment.  The maven-resources-plugin is then used to copy the library to the correct location.
+   Both of these are listed as being executed in the <i>prepare-package</i> phase and they should be executed in the
+   order that they appear in the pom.xml file.</p>
+<h2>Generate Javadocs</h2>
+<p>I would reccomend placing the Javadocs on the GitHub repository so that they be accessed by other builds.  (See
+   <a href="http:bradleyross.github.io/tutorials">http://bradleyross.io/tutorials</a>)  The websites are stored as
+   the gh-pages branch of a project.  (Create the branch using <code>git branch --orphan gh-pages</code>.  This
+   disconnects it from the code branches.  You can then delete the files that are currently there and insert the files for 
+   the website.)</p>
+<h2>References</h2>
+<ul>
+<li><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/jniTOC.html" target="_blank">
+    https://docs.oracle.com/javase/8/docs/technotes/guides/jni/spec/jniTOC.html
+    </a></li>
+<li><a href="http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javah.html" target="_blank">
+    http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javah.html</a></li>
+<li><a href="http://docs.oracle.com/javase/7/docs/technotes/guides/jni/" target="_blank">
+    http://docs.oracle.com/javase/7/docs/technotes/guides/jni/</a></li>
+<li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html" target="_blank">
+    https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html</a></li>
+<li><a href="https://stackoverflow.com/questions/13796786/jstring-return-in-jni-program" target="_blank">
+    https://stackoverflow.com/questions/13796786/jstring-return-in-jni-program</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Java_Native_Interface target="_blank">
+    https://en.wikipedia.org/wiki/Java_Native_Interface</a></li>
+</ul>
+<hr />
+<p><a href="index.html">Return to landing page</a></p>
+</body>
+</html>
