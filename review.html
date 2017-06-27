@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Code Review</title>
+</head>
+<body>
+<h2>gh_pages</h2>
+<p>For GitHub, the gh_pages branch contains the documentation for the
+   project.  For my fork, the gh_pages branch can be viewed
+   using <a href="http://bradleyross.github.io/CoreMidi4J" target="_blank">
+   http://bradleyross.github.io/CoreMidi4J</a>.  You might want to 
+   consider setting up such a branch for your project.</p>
+<p>Please note that this site contains the Javadoc files for the Java
+   code and the <a href="http://www.doxygen.org" target="_blank">
+   dOxygen</a> documention for the C (and C-like) code.</p>
+<h2>javah</h2>
+<p>The command javah is part of the Java Development Kit (JDK) and
+   creates a C/C++ header file for Java Native Interface (JNI)
+   methods.  In this project, the pom.xml file ran javah against the classes
+   containing JNI methods
+   (CoreMidiClient, CoreMidiDestination, CoreMidiDeviceProvider,
+   CoreMidiDeviceProvider.MidiProperties, and CoreMidiInputPort, CoreMidiOutputPort,
+   CoreMidiSource) and creates the file CoreMidi4J.h.  (CoreMidiDeviceProvider.MidiProperties
+   was added to the list because it was used in other JNI methods.)<p>
+<p>Any changes to the Java classes may result in changes to CoreMidi4J.h and
+   this would require changes to the other C++ source files and headers.  I therefore feel 
+   that you should remove the execution of javah from the pom.xml configuration.  Since
+   any changes in the results will mean changes to the C code, the use of javah
+   should be part of a manual step.</p>
+<h2>dOxygen</h2>
+<p><a href="http://www.doxygen.org" target="_blank">dOxygen</a> is a documenting
+   tool for C-like languages.  You can download the dOxygen program from the
+   website and then run it against the source code in the Native folder to
+   get a set of documentation.</p>
+<p>I'm still trying to figure out how to limit the filenames to avoid the full
+   name with all directories.  (I'm using a new version of dOxygen and running it 
+   differently.  See</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/6261366/relative-files-paths-in-doxygen-generated-documentation" target="_blank">
+    https://stackoverflow.com/questions/6261366/relative-files-paths-in-doxygen-generated-documentation</a></li>
+</ul>
+<hr />
+<p><a href="index.html">Return to landing page</a></p>
+</body>
+</html>
