@@ -1,0 +1,102 @@
+The purpose of the CoreMidi4J software is to provide a JNI interface to the CoreMidi library in Mac OS X.
+
+\subsection*{References}
+
+
+\begin{DoxyItemize}
+\item Apple CoreMidi docoumentation is located at \href{https://developer.apple.com/documentation/coremidi}{\tt https://developer.apple.com/documentation/coremidi}.
+\item dOxygen documentation is located at \href{http://www.doxygen.org}{\tt http://www.doxygen.org}.
+\item See \href{http://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/functions.html}{\tt http://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/functions.html} for some information on the C functions used by JNI.
+\end{DoxyItemize}
+
+\subsection*{JNI methods}
+
+The following is a list of the C and Java signatures for the native methods.
+
+\subsubsection*{CoreMidiClient}
+
+
+\begin{DoxyItemize}
+\item The Java signature {\ttfamily int CoreMidiClient.createClient(String) is associated with' the C signnature {\ttfamily JNIEXPORT jint JNICALL ...CoreMidiClient\_\-createClient(JNIEnv $\ast$, jobject, jstring)}}
+\item {\ttfamily  JNIEXPORT void JNICALL ...CoreMidiClient\_\-disposeClient(JNIEnv $\ast$, jobject, jint);}
+\end{DoxyItemize}
+
+{\ttfamily  \subsubsection*{CoreMidiDestination}}
+
+{\ttfamily }
+
+{\ttfamily 
+\begin{DoxyItemize}
+\item The Javasignature {\ttfamily long CoreMidiDestination.getMicroSecondTime()} is associated with the C signature {\ttfamily JNIEXPORT jlong ...CoreMidiDestination\_\-getMicroSecondTime(JNIEnv $\ast$, jobject)}
+\end{DoxyItemize}}
+
+{\ttfamily  \subsubsection*{CoreMidiDeviceProvider}}
+
+{\ttfamily }
+
+{\ttfamily 
+\begin{DoxyItemize}
+\item The Java signature {\ttfamily int CoreMidiDeviceProvider.getNumberOfDestinations()} is associated with the C signature {\ttfamily JNIEXPORT jint JNICALL ...CoreMidiDeviceProvider\_\-getNumberOfSources (JNIEnv $\ast$, jobject)}
+\end{DoxyItemize}}
+
+{\ttfamily 
+\begin{DoxyItemize}
+\item The Java signature {\ttfamily int CoreMidiDeviceProvider.getNumberOfDestinations()} is associated with the C signature {\ttfamily JNIEXPORT jint JNICALL ...CoreMidiDeviceProvider\_\-getNumberOfDestinations(JNIEnv $\ast$, jobject)}
+\end{DoxyItemize}}
+
+{\ttfamily 
+\begin{DoxyItemize}
+\item The Java signature {\ttfamily int CoreMidiDeviceProvider.getSource(int)} is associated with the C signature {\ttfamily JNIEXPORT jint JNICALL ...CoreMidiDeviceProvider\_\-getSource(JNIEnv $\ast$, jobject, jint)}
+\item The Java signature {\ttfamily int CoreMidiDeviceProvider.getDestination(int){\ttfamily  is associated with the C signature {\ttfamily JNIEXPORT jint JNICALL ...CoreMidiDeviceProvider\_\-getDestination (JNIEnv $\ast$, jobject, jint)}}}
+\item {\ttfamily {\ttfamily  The Java signatue {\ttfamily int CoreMidiDeviceProvider.getUniqueId(int)} is associated with the C signature {\ttfamily JNIEXPORT jint JNICALL ...CoreMidiDeviceProvider\_\-getUniqueID(JNIEnv $\ast$, jobject, jint);}}}
+\end{DoxyItemize}}
+
+{\ttfamily {\ttfamily {\ttfamily  \subsubsection*{CoreMidiInputPort}}}}
+
+{\ttfamily {\ttfamily {\ttfamily }}}
+
+{\ttfamily {\ttfamily {\ttfamily 
+\begin{DoxyItemize}
+\item JNIEXPORT jint JNICALL ...CoreMidiInputPort\_\-createInputPort(JNIEnv $\ast$, jobject, jint, jstring);
+\end{DoxyItemize}}}}
+
+{\ttfamily {\ttfamily {\ttfamily 
+\begin{DoxyItemize}
+\item JNIEXPORT jlong JNICALL ...CoreMidiInputPort\_\-midiPortConnectSource(JNIEnv $\ast$, jobject, jint, jobject);
+\end{DoxyItemize}}}}
+
+{\ttfamily {\ttfamily {\ttfamily 
+\begin{DoxyItemize}
+\item JNIEXPORT void JNICALL ...CoreMidiInputPort\_\-midiPortDisconnectSource(JNIEnv $\ast$, jobject, jint, jlong, jobject);
+\end{DoxyItemize}}}}
+
+{\ttfamily {\ttfamily {\ttfamily  \subsubsection*{CoreMidiOutputPort}}}}
+
+{\ttfamily {\ttfamily {\ttfamily }}}
+
+{\ttfamily {\ttfamily {\ttfamily 
+\begin{DoxyItemize}
+\item JNIEXPORT jint JNICALL ...CoreMidiOutputPort\_\-createOutputPort(JNIEnv $\ast$, jobject, jint, jstring);
+\end{DoxyItemize}}}}
+
+{\ttfamily {\ttfamily {\ttfamily 
+\begin{DoxyItemize}
+\item JNIEXPORT void JNICALL ...CoreMidiOutputPort\_\-sendMidiMessage(JNIEnv $\ast$, jobject, jint, jint, jobject, jlong);
+\end{DoxyItemize}}}}
+
+{\ttfamily {\ttfamily {\ttfamily  \subsubsection*{CoreMidiSource}}}}
+
+{\ttfamily {\ttfamily {\ttfamily }}}
+
+{\ttfamily {\ttfamily {\ttfamily 
+\begin{DoxyItemize}
+\item The Java signature {\ttfamily long CoreMidi.Source()} is associated with C signature {\ttfamily JNIEXPORT jlong JNICALL ...CoreMidiSource\_\-getMicroSecondTime(JNIEnv $\ast$, jobject)}
+\end{DoxyItemize}}}}
+
+{\ttfamily {\ttfamily {\ttfamily  \subsection*{Special macros}}}}
+
+{\ttfamily {\ttfamily {\ttfamily  \subsubsection*{JNICALL}}}}
+
+{\ttfamily {\ttfamily {\ttfamily  \subsubsection*{JNIEXPORT}}}}
+
+{\ttfamily {\ttfamily {\ttfamily  }}}

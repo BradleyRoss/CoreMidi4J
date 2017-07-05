@@ -1,0 +1,83 @@
+\hypertarget{_core_midi4_j_utilities_8h}{
+\section{CoreMidi4JUtilities.h File Reference}
+\label{_core_midi4_j_utilities_8h}\index{CoreMidi4JUtilities.h@{CoreMidi4JUtilities.h}}
+}
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include \char`\"{}CoreMidi4J.h\char`\"{}}\par
+{\ttfamily \#include $<$CoreMIDI/CoreMIDI.h$>$}\par
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structmidi_call_back_parameters}{midiCallBackParameters}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structmidi_call_back_parameters}{midiCallBackParameters} \hyperlink{_core_midi4_j_utilities_8h_a1e1b65bf9e1b360541a6798fe9a54bc0}{MIDI\_\-CALLBACK\_\-PARAMETERS}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_core_midi4_j_utilities_8h_a0bb629d6e7599ae55be3b403e09af09a}{ThrowException} (JNIEnv $\ast$env, CFStringRef function, OSStatus status)
+\item 
+void \hyperlink{_core_midi4_j_utilities_8h_acb97decae2851f89c976a29a1a9b3d97}{printJniStatus} (int status)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{_core_midi4_j_utilities_8h_a1e1b65bf9e1b360541a6798fe9a54bc0}{
+\index{CoreMidi4JUtilities.h@{CoreMidi4JUtilities.h}!MIDI\_\-CALLBACK\_\-PARAMETERS@{MIDI\_\-CALLBACK\_\-PARAMETERS}}
+\index{MIDI\_\-CALLBACK\_\-PARAMETERS@{MIDI\_\-CALLBACK\_\-PARAMETERS}!CoreMidi4JUtilities.h@{CoreMidi4JUtilities.h}}
+\subsubsection[{MIDI\_\-CALLBACK\_\-PARAMETERS}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf midiCallBackParameters}  {\bf MIDI\_\-CALLBACK\_\-PARAMETERS}}}
+\label{_core_midi4_j_utilities_8h_a1e1b65bf9e1b360541a6798fe9a54bc0}
+
+
+\subsection{Function Documentation}
+\hypertarget{_core_midi4_j_utilities_8h_acb97decae2851f89c976a29a1a9b3d97}{
+\index{CoreMidi4JUtilities.h@{CoreMidi4JUtilities.h}!printJniStatus@{printJniStatus}}
+\index{printJniStatus@{printJniStatus}!CoreMidi4JUtilities.h@{CoreMidi4JUtilities.h}}
+\subsubsection[{printJniStatus}]{\setlength{\rightskip}{0pt plus 5cm}void printJniStatus (int {\em status})}}
+\label{_core_midi4_j_utilities_8h_acb97decae2851f89c976a29a1a9b3d97}
+Helper function that prints out JNI Status Codes
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em status}]The status value to print \end{DoxyParams}
+
+
+Definition at line 54 of file CoreMidi4JUtilities.cpp.
+
+\hypertarget{_core_midi4_j_utilities_8h_a0bb629d6e7599ae55be3b403e09af09a}{
+\index{CoreMidi4JUtilities.h@{CoreMidi4JUtilities.h}!ThrowException@{ThrowException}}
+\index{ThrowException@{ThrowException}!CoreMidi4JUtilities.h@{CoreMidi4JUtilities.h}}
+\subsubsection[{ThrowException}]{\setlength{\rightskip}{0pt plus 5cm}void ThrowException (JNIEnv $\ast$ {\em env}, \/  CFStringRef {\em function}, \/  OSStatus {\em status})}}
+\label{_core_midi4_j_utilities_8h_a0bb629d6e7599ae55be3b403e09af09a}
+Title: CoreMIDI4J Description: Core MIDI Device Provider for Java on OS X Copyright: Copyright (c) 2015-\/2016 Company: x.factory Librarians
+
+\begin{DoxyAuthor}{Author}
+Derek Cook
+\end{DoxyAuthor}
+CoreMIDI4J is an open source Service Provider Interface for supporting external MIDI devices on MAC OS X
+
+This file is part of the XCODE project that provides the native implementation of CoreMIDI4J
+
+CREDITS -\/ This library uses principles established by OSXMIDI4J, but converted so it operates at the JNI level with no additional libraries required Helper function for throwing exceptions to Java
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em env}]The JNI environment \item[{\em function}]The name of the function that caused the error \item[{\em status}]The status code which provides details about the error\end{DoxyParams}
+TODO -\/ At some point it might be useful to decode the error here. Could also store more information in the exception?
+
+Title: CoreMIDI4J Description: Core MIDI Device Provider for Java on OS X Copyright: Copyright (c) 2015-\/2016 Company: x.factory Librarians
+
+\begin{DoxyAuthor}{Author}
+Derek Cook
+\end{DoxyAuthor}
+CoreMIDI4J is an open source Service Provider Interface for supporting external MIDI devices on MAC OS X
+
+This file is part of the XCODE project that provides the native implementation of CoreMIDI4J
+
+CREDITS -\/ This library uses principles established by OSXMIDI4J, but converted so it operates at the JNI level with no additional libraries required 
+
+Definition at line 28 of file CoreMidi4JUtilities.cpp.
+

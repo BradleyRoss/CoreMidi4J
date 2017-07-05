@@ -1,0 +1,72 @@
+\hypertarget{_core_midi_input_port_8cpp}{
+\section{CoreMidiInputPort.cpp File Reference}
+\label{_core_midi_input_port_8cpp}\index{CoreMidiInputPort.cpp@{CoreMidiInputPort.cpp}}
+}
+{\ttfamily \#include \char`\"{}CoreMidiInputPort.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}CoreMidi4J.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}CoreMidi4JUtilities.h\char`\"{}}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$mach/mach.h$>$}\par
+{\ttfamily \#include $<$mach/mach\_\-time.h$>$}\par
+{\ttfamily \#include $<$CoreMIDI/CoreMIDI.h$>$}\par
+{\ttfamily \#include $<$CoreServices/CoreServices.h$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_core_midi_input_port_8cpp_a1fc5e06e1cc08c08a16561ee4aa98dd4}{MIDIInput} (const MIDIPacketList $\ast$packets, void $\ast$readProcRefCon, void $\ast$srcConnRefCon)
+\item 
+JNIEXPORT jint JNICALL \hyperlink{_core_midi_input_port_8cpp_ac8225b2ad76c3c1bb42e5874331cf125}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort} (JNIEnv $\ast$env, jobject obj, jint clientReference, jstring portName)
+\item 
+JNIEXPORT jlong JNICALL \hyperlink{_core_midi_input_port_8cpp_aff960b4f140dfae986d9de5efdfd386f}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource} (JNIEnv $\ast$env, jobject obj, jint inputPortReference, jobject sourceDevice)
+\item 
+JNIEXPORT void JNICALL \hyperlink{_core_midi_input_port_8cpp_a734d8e4c4e9dea3a485c8f1ef8e276ff}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource} (JNIEnv $\ast$env, jobject obj, jint inputPortReference, jlong memoryReference, jobject sourceDevice)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_core_midi_input_port_8cpp_ac8225b2ad76c3c1bb42e5874331cf125}{
+\index{CoreMidiInputPort.cpp@{CoreMidiInputPort.cpp}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort}!CoreMidiInputPort.cpp@{CoreMidiInputPort.cpp}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jint JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort (JNIEnv $\ast$ {\em env}, \/  jobject {\em obj}, \/  jint {\em clientReference}, \/  jstring {\em portName})}}
+\label{_core_midi_input_port_8cpp_ac8225b2ad76c3c1bb42e5874331cf125}
+
+
+Definition at line 139 of file CoreMidiInputPort.cpp.
+
+\hypertarget{_core_midi_input_port_8cpp_aff960b4f140dfae986d9de5efdfd386f}{
+\index{CoreMidiInputPort.cpp@{CoreMidiInputPort.cpp}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource}!CoreMidiInputPort.cpp@{CoreMidiInputPort.cpp}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jlong JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource (JNIEnv $\ast$ {\em env}, \/  jobject {\em obj}, \/  jint {\em inputPortReference}, \/  jobject {\em sourceDevice})}}
+\label{_core_midi_input_port_8cpp_aff960b4f140dfae986d9de5efdfd386f}
+
+
+Definition at line 182 of file CoreMidiInputPort.cpp.
+
+\hypertarget{_core_midi_input_port_8cpp_a734d8e4c4e9dea3a485c8f1ef8e276ff}{
+\index{CoreMidiInputPort.cpp@{CoreMidiInputPort.cpp}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource}!CoreMidiInputPort.cpp@{CoreMidiInputPort.cpp}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT void JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource (JNIEnv $\ast$ {\em env}, \/  jobject {\em obj}, \/  jint {\em inputPortReference}, \/  jlong {\em memoryReference}, \/  jobject {\em sourceDevice})}}
+\label{_core_midi_input_port_8cpp_a734d8e4c4e9dea3a485c8f1ef8e276ff}
+
+
+Definition at line 242 of file CoreMidiInputPort.cpp.
+
+\hypertarget{_core_midi_input_port_8cpp_a1fc5e06e1cc08c08a16561ee4aa98dd4}{
+\index{CoreMidiInputPort.cpp@{CoreMidiInputPort.cpp}!MIDIInput@{MIDIInput}}
+\index{MIDIInput@{MIDIInput}!CoreMidiInputPort.cpp@{CoreMidiInputPort.cpp}}
+\subsubsection[{MIDIInput}]{\setlength{\rightskip}{0pt plus 5cm}void MIDIInput (const MIDIPacketList $\ast$ {\em packets}, \/  void $\ast$ {\em readProcRefCon}, \/  void $\ast$ {\em srcConnRefCon})}}
+\label{_core_midi_input_port_8cpp_a1fc5e06e1cc08c08a16561ee4aa98dd4}
+Title: CoreMIDI4J Description: Core MIDI Device Provider for Java on OS X Copyright: Copyright (c) 2015-\/2016 Company: x.factory Librarians
+
+\begin{DoxyAuthor}{Author}
+Derek Cook
+\end{DoxyAuthor}
+CoreMIDI4J is an open source Service Provider Interface for supporting external MIDI devices on MAC OS X
+
+This file is part of the XCODE project that provides the native implementation of CoreMIDI4J
+
+CREDITS -\/ This library uses principles established by OSXMIDI4J, but converted so it operates at the JNI level with no additional libraries required 
+
+Definition at line 32 of file CoreMidiInputPort.cpp.
+

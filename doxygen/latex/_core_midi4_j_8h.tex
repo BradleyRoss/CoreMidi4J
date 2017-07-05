@@ -1,0 +1,295 @@
+\hypertarget{_core_midi4_j_8h}{
+\section{CoreMidi4J.h File Reference}
+\label{_core_midi4_j_8h}\index{CoreMidi4J.h@{CoreMidi4J.h}}
+}
+{\ttfamily \#include $<$jni.h$>$}\par
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_core_midi4_j_8h_a93e15a84b0c03dc7b3fe3d772ff760fc}{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination}
+\item 
+\#define \hyperlink{_core_midi4_j_8h_a7fe2f92e6a1e0ec0e808a0f31e903401}{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider}
+\item 
+\#define \hyperlink{_core_midi4_j_8h_a4805fbdea58ffb46214f42450756f6d7}{uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-DEVICE\_\-MAP\_\-SIZE}~20L
+\item 
+\#define \hyperlink{_core_midi4_j_8h_a7ea941dc9e4e74d6fd105574831c029d}{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-MidiProperties}
+\item 
+\#define \hyperlink{_core_midi4_j_8h_abe9a6c37b8f79c66a559f993e7158962}{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort}
+\item 
+\#define \hyperlink{_core_midi4_j_8h_a8799121864cf19c083279e7e59508c7b}{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort}
+\item 
+\#define \hyperlink{_core_midi4_j_8h_ac029581c0ad3aa6c1c2dd351513300c3}{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+JNIEXPORT jint JNICALL \hyperlink{_core_midi4_j_8h_a7f7ca8d831bb770f197639d91a2f8537}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-createClient} (JNIEnv $\ast$, jobject, jstring)
+\item 
+JNIEXPORT void JNICALL \hyperlink{_core_midi4_j_8h_a7033ffda67f0b4987972d6b311e58d81}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-disposeClient} (JNIEnv $\ast$, jobject, jint)
+\item 
+JNIEXPORT jlong JNICALL \hyperlink{_core_midi4_j_8h_a35a55bc425fe28cc4ebb18db17b3eb84}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination\_\-getMicroSecondTime} (JNIEnv $\ast$, jobject)
+\item 
+JNIEXPORT jint JNICALL \hyperlink{_core_midi4_j_8h_a44a311356c53ea7da30e4c602a194871}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfSources} (JNIEnv $\ast$, jobject)
+\item 
+JNIEXPORT jint JNICALL \hyperlink{_core_midi4_j_8h_a37db3d92caf19a28478c4b7f8b948c51}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfDestinations} (JNIEnv $\ast$, jobject)
+\item 
+JNIEXPORT jint JNICALL \hyperlink{_core_midi4_j_8h_a227d122f6630194c04c2dd746ee800f3}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getSource} (JNIEnv $\ast$, jobject, jint)
+\item 
+JNIEXPORT jint JNICALL \hyperlink{_core_midi4_j_8h_a206947f3b2a8d493159806b8e200d396}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getDestination} (JNIEnv $\ast$, jobject, jint)
+\item 
+JNIEXPORT jint JNICALL \hyperlink{_core_midi4_j_8h_a3fb33d9f90d61bfdabf5e752076be693}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getUniqueID} (JNIEnv $\ast$, jobject, jint)
+\item 
+JNIEXPORT jobject JNICALL \hyperlink{_core_midi4_j_8h_ae8d8c2a25c01234a199386a3859edf3b}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getMidiDeviceInfo} (JNIEnv $\ast$, jobject, jint)
+\item 
+JNIEXPORT jint JNICALL \hyperlink{_core_midi4_j_8h_a3a80a5af561f0a2266775e259f24ba37}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort} (JNIEnv $\ast$, jobject, jint, jstring)
+\item 
+JNIEXPORT jlong JNICALL \hyperlink{_core_midi4_j_8h_a15ab4f2ca9db350106de3bf60c565d97}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource} (JNIEnv $\ast$, jobject, jint, jobject)
+\item 
+JNIEXPORT void JNICALL \hyperlink{_core_midi4_j_8h_a964ddea4e71d23cf24cdb1a81cd66b34}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource} (JNIEnv $\ast$, jobject, jint, jlong, jobject)
+\item 
+JNIEXPORT jint JNICALL \hyperlink{_core_midi4_j_8h_a99071a0c8c09d02c1e6ee2a4d6238f36}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort} (JNIEnv $\ast$, jobject, jint, jstring)
+\item 
+JNIEXPORT void JNICALL \hyperlink{_core_midi4_j_8h_aa9561e59ebecf6a059fa3e8806031ea8}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage} (JNIEnv $\ast$, jobject, jint, jint, jobject, jlong)
+\item 
+JNIEXPORT jlong JNICALL \hyperlink{_core_midi4_j_8h_a3c038bc1e87602b16caf7943e6af5b60}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource\_\-getMicroSecondTime} (JNIEnv $\ast$, jobject)
+\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{_core_midi4_j_8h_a93e15a84b0c03dc7b3fe3d772ff760fc}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination}}
+\index{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination}}
+\label{_core_midi4_j_8h_a93e15a84b0c03dc7b3fe3d772ff760fc}
+
+
+Definition at line 33 of file CoreMidi4J.h.
+
+\hypertarget{_core_midi4_j_8h_a7fe2f92e6a1e0ec0e808a0f31e903401}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider}}
+\index{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider}}
+\label{_core_midi4_j_8h_a7fe2f92e6a1e0ec0e808a0f31e903401}
+
+
+Definition at line 52 of file CoreMidi4J.h.
+
+\hypertarget{_core_midi4_j_8h_a7ea941dc9e4e74d6fd105574831c029d}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-MidiProperties@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-MidiProperties}}
+\index{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-MidiProperties@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-MidiProperties}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-MidiProperties}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-MidiProperties}}
+\label{_core_midi4_j_8h_a7ea941dc9e4e74d6fd105574831c029d}
+
+
+Definition at line 113 of file CoreMidi4J.h.
+
+\hypertarget{_core_midi4_j_8h_abe9a6c37b8f79c66a559f993e7158962}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort}}
+\index{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort}}
+\label{_core_midi4_j_8h_abe9a6c37b8f79c66a559f993e7158962}
+
+
+Definition at line 124 of file CoreMidi4J.h.
+
+\hypertarget{_core_midi4_j_8h_a8799121864cf19c083279e7e59508c7b}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort}}
+\index{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort}}
+\label{_core_midi4_j_8h_a8799121864cf19c083279e7e59508c7b}
+
+
+Definition at line 159 of file CoreMidi4J.h.
+
+\hypertarget{_core_midi4_j_8h_ac029581c0ad3aa6c1c2dd351513300c3}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource}}
+\index{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource@{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{\_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource}]{\setlength{\rightskip}{0pt plus 5cm}\#define \_\-Included\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource}}
+\label{_core_midi4_j_8h_ac029581c0ad3aa6c1c2dd351513300c3}
+
+
+Definition at line 186 of file CoreMidi4J.h.
+
+\hypertarget{_core_midi4_j_8h_a4805fbdea58ffb46214f42450756f6d7}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-DEVICE\_\-MAP\_\-SIZE@{uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-DEVICE\_\-MAP\_\-SIZE}}
+\index{uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-DEVICE\_\-MAP\_\-SIZE@{uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-DEVICE\_\-MAP\_\-SIZE}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-DEVICE\_\-MAP\_\-SIZE}]{\setlength{\rightskip}{0pt plus 5cm}\#define uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-DEVICE\_\-MAP\_\-SIZE~20L}}
+\label{_core_midi4_j_8h_a4805fbdea58ffb46214f42450756f6d7}
+
+
+Definition at line 57 of file CoreMidi4J.h.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{_core_midi4_j_8h_a7f7ca8d831bb770f197639d91a2f8537}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-createClient@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-createClient}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-createClient@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-createClient}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-createClient}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jint JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-createClient (JNIEnv $\ast$, \/  jobject, \/  jstring)}}
+\label{_core_midi4_j_8h_a7f7ca8d831bb770f197639d91a2f8537}
+
+
+Definition at line 110 of file CoreMidiClient.cpp.
+
+\hypertarget{_core_midi4_j_8h_a7033ffda67f0b4987972d6b311e58d81}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-disposeClient@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-disposeClient}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-disposeClient@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-disposeClient}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-disposeClient}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT void JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiClient\_\-disposeClient (JNIEnv $\ast$, \/  jobject, \/  jint)}}
+\label{_core_midi4_j_8h_a7033ffda67f0b4987972d6b311e58d81}
+
+
+Definition at line 177 of file CoreMidiClient.cpp.
+
+\hypertarget{_core_midi4_j_8h_a35a55bc425fe28cc4ebb18db17b3eb84}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination\_\-getMicroSecondTime@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination\_\-getMicroSecondTime}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination\_\-getMicroSecondTime@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination\_\-getMicroSecondTime}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination\_\-getMicroSecondTime}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jlong JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDestination\_\-getMicroSecondTime (JNIEnv $\ast$, \/  jobject)}}
+\label{_core_midi4_j_8h_a35a55bc425fe28cc4ebb18db17b3eb84}
+Title: CoreMIDI4J Description: Core MIDI Device Provider for Java on OS X Copyright: Copyright (c) 2015-\/2016 Company: x.factory Librarians
+
+\begin{DoxyAuthor}{Author}
+Derek Cook
+\end{DoxyAuthor}
+CoreMIDI4J is an open source Service Provider Interface for supporting external MIDI devices on MAC OS X
+
+This file is part of the XCODE project that provides the native implementation of CoreMIDI4J
+
+CREDITS -\/ This library uses principles established by OSXMIDI4J, but converted so it operates at the JNI level with no additional libraries required 
+
+Definition at line 30 of file CoreMidiDestination.cpp.
+
+\hypertarget{_core_midi4_j_8h_a206947f3b2a8d493159806b8e200d396}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getDestination@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getDestination}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getDestination@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getDestination}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getDestination}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jint JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getDestination (JNIEnv $\ast$, \/  jobject, \/  jint)}}
+\label{_core_midi4_j_8h_a206947f3b2a8d493159806b8e200d396}
+
+
+Definition at line 109 of file CoreMidiDeviceProvider.cpp.
+
+\hypertarget{_core_midi4_j_8h_ae8d8c2a25c01234a199386a3859edf3b}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getMidiDeviceInfo@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getMidiDeviceInfo}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getMidiDeviceInfo@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getMidiDeviceInfo}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getMidiDeviceInfo}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jobject JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getMidiDeviceInfo (JNIEnv $\ast$, \/  jobject, \/  jint)}}
+\label{_core_midi4_j_8h_ae8d8c2a25c01234a199386a3859edf3b}
+
+
+Definition at line 161 of file CoreMidiDeviceProvider.cpp.
+
+\hypertarget{_core_midi4_j_8h_a37db3d92caf19a28478c4b7f8b948c51}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfDestinations@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfDestinations}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfDestinations@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfDestinations}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfDestinations}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jint JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfDestinations (JNIEnv $\ast$, \/  jobject)}}
+\label{_core_midi4_j_8h_a37db3d92caf19a28478c4b7f8b948c51}
+
+
+Definition at line 57 of file CoreMidiDeviceProvider.cpp.
+
+\hypertarget{_core_midi4_j_8h_a44a311356c53ea7da30e4c602a194871}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfSources@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfSources}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfSources@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfSources}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfSources}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jint JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getNumberOfSources (JNIEnv $\ast$ {\em env}, \/  jobject {\em obj})}}
+\label{_core_midi4_j_8h_a44a311356c53ea7da30e4c602a194871}
+Title: CoreMIDI4J Description: Core MIDI Device Provider for Java on OS X Copyright: Copyright (c) 2015-\/2016 Company: x.factory Librarians
+
+\begin{DoxyAuthor}{Author}
+Derek Cook
+\end{DoxyAuthor}
+CoreMIDI4J is an open source Service Provider Interface for supporting external MIDI devices on MAC OS X
+
+This file is part of the XCODE project that provides the native implementation of CoreMIDI4J
+
+CREDITS -\/ This library uses principles established by OSXMIDI4J, but converted so it operates at the JNI level with no additional libraries required 
+
+Definition at line 37 of file CoreMidiDeviceProvider.cpp.
+
+\hypertarget{_core_midi4_j_8h_a227d122f6630194c04c2dd746ee800f3}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getSource@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getSource}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getSource@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getSource}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getSource}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jint JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getSource (JNIEnv $\ast$, \/  jobject, \/  jint)}}
+\label{_core_midi4_j_8h_a227d122f6630194c04c2dd746ee800f3}
+
+
+Definition at line 80 of file CoreMidiDeviceProvider.cpp.
+
+\hypertarget{_core_midi4_j_8h_a3fb33d9f90d61bfdabf5e752076be693}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getUniqueID@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getUniqueID}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getUniqueID@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getUniqueID}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getUniqueID}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jint JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiDeviceProvider\_\-getUniqueID (JNIEnv $\ast$, \/  jobject, \/  jint)}}
+\label{_core_midi4_j_8h_a3fb33d9f90d61bfdabf5e752076be693}
+
+
+Definition at line 136 of file CoreMidiDeviceProvider.cpp.
+
+\hypertarget{_core_midi4_j_8h_a3a80a5af561f0a2266775e259f24ba37}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jint JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-createInputPort (JNIEnv $\ast$, \/  jobject, \/  jint, \/  jstring)}}
+\label{_core_midi4_j_8h_a3a80a5af561f0a2266775e259f24ba37}
+
+
+Definition at line 139 of file CoreMidiInputPort.cpp.
+
+\hypertarget{_core_midi4_j_8h_a15ab4f2ca9db350106de3bf60c565d97}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jlong JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortConnectSource (JNIEnv $\ast$, \/  jobject, \/  jint, \/  jobject)}}
+\label{_core_midi4_j_8h_a15ab4f2ca9db350106de3bf60c565d97}
+
+
+Definition at line 182 of file CoreMidiInputPort.cpp.
+
+\hypertarget{_core_midi4_j_8h_a964ddea4e71d23cf24cdb1a81cd66b34}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT void JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiInputPort\_\-midiPortDisconnectSource (JNIEnv $\ast$, \/  jobject, \/  jint, \/  jlong, \/  jobject)}}
+\label{_core_midi4_j_8h_a964ddea4e71d23cf24cdb1a81cd66b34}
+
+
+Definition at line 242 of file CoreMidiInputPort.cpp.
+
+\hypertarget{_core_midi4_j_8h_a99071a0c8c09d02c1e6ee2a4d6238f36}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jint JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort (JNIEnv $\ast$ {\em env}, \/  jobject {\em obj}, \/  jint {\em clientReference}, \/  jstring {\em portName})}}
+\label{_core_midi4_j_8h_a99071a0c8c09d02c1e6ee2a4d6238f36}
+Title: CoreMIDI4J Description: Core MIDI Device Provider for Java on OS X Copyright: Copyright (c) 2015-\/2016 Company: x.factory Librarians
+
+\begin{DoxyAuthor}{Author}
+Derek Cook
+\end{DoxyAuthor}
+CoreMIDI4J is an open source Service Provider Interface for supporting external MIDI devices on MAC OS X
+
+This file is part of the XCODE project that provides the native implementation of CoreMIDI4J
+
+CREDITS -\/ This library uses principles established by OSXMIDI4J, but converted so it operates at the JNI level with no additional libraries required 
+
+Definition at line 41 of file CoreMidiOutputPort.cpp.
+
+\hypertarget{_core_midi4_j_8h_aa9561e59ebecf6a059fa3e8806031ea8}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT void JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage (JNIEnv $\ast$, \/  jobject, \/  jint, \/  jint, \/  jobject, \/  jlong)}}
+\label{_core_midi4_j_8h_aa9561e59ebecf6a059fa3e8806031ea8}
+
+
+Definition at line 86 of file CoreMidiOutputPort.cpp.
+
+\hypertarget{_core_midi4_j_8h_a3c038bc1e87602b16caf7943e6af5b60}{
+\index{CoreMidi4J.h@{CoreMidi4J.h}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource\_\-getMicroSecondTime@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource\_\-getMicroSecondTime}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource\_\-getMicroSecondTime@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource\_\-getMicroSecondTime}!CoreMidi4J.h@{CoreMidi4J.h}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource\_\-getMicroSecondTime}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jlong JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiSource\_\-getMicroSecondTime (JNIEnv $\ast$, \/  jobject)}}
+\label{_core_midi4_j_8h_a3c038bc1e87602b16caf7943e6af5b60}
+Title: CoreMIDI4J Description: Core MIDI Device Provider for Java on OS X Copyright: Copyright (c) 2015-\/2016 Company: x.factory Librarians
+
+\begin{DoxyAuthor}{Author}
+Derek Cook
+\end{DoxyAuthor}
+CoreMIDI4J is an open source Service Provider Interface for supporting external MIDI devices on MAC OS X
+
+This file is part of the XCODE project that provides the native implementation of CoreMIDI4J
+
+CREDITS -\/ This library uses principles established by OSXMIDI4J, but converted so it operates at the JNI level with no additional libraries required 
+
+Definition at line 30 of file CoreMidiSource.cpp.
+

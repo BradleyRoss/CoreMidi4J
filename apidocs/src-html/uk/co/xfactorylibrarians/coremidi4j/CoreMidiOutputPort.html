@@ -36,10 +36,10 @@
 <span class="sourceLineNo">028</span>  /**<a name="line.28"></a>
 <span class="sourceLineNo">029</span>   * Constructor<a name="line.29"></a>
 <span class="sourceLineNo">030</span>   * <a name="line.30"></a>
-<span class="sourceLineNo">031</span>   * @param clientReference     The client reference<a name="line.31"></a>
-<span class="sourceLineNo">032</span>   * @param portName                            The name of the port<a name="line.32"></a>
+<span class="sourceLineNo">031</span>   * @param clientReference        The client reference<a name="line.31"></a>
+<span class="sourceLineNo">032</span>   * @param portName           The name of the port<a name="line.32"></a>
 <span class="sourceLineNo">033</span>   *  <a name="line.33"></a>
-<span class="sourceLineNo">034</span>   * @throws                                                            CoreMidiException if there is a problem creating the port<a name="line.34"></a>
+<span class="sourceLineNo">034</span>   * @throws           CoreMidiException if there is a problem creating the port<a name="line.34"></a>
 <span class="sourceLineNo">035</span>   * <a name="line.35"></a>
 <span class="sourceLineNo">036</span>   */<a name="line.36"></a>
 <span class="sourceLineNo">037</span><a name="line.37"></a>
@@ -53,11 +53,11 @@
 <span class="sourceLineNo">045</span>   * Sends a MIDI message on this output port to the specified destination end point<a name="line.45"></a>
 <span class="sourceLineNo">046</span>   * <a name="line.46"></a>
 <span class="sourceLineNo">047</span>   * @param destinationEndPointReference        The destination end point to send the message to<a name="line.47"></a>
-<span class="sourceLineNo">048</span>   * @param message                                                                                             The message to send<a name="line.48"></a>
+<span class="sourceLineNo">048</span>   * @param message                             The message to send<a name="line.48"></a>
 <span class="sourceLineNo">049</span>   * @param timestamp                     The time at which the message should take effect, in microseconds since the<a name="line.49"></a>
 <span class="sourceLineNo">050</span>   *                                      system booted, with 0 meaning "immediately".<a name="line.50"></a>
 <span class="sourceLineNo">051</span>   * <a name="line.51"></a>
-<span class="sourceLineNo">052</span>   * @throws                                                                                                                    CoreMidiException if there is a problem sending the message<a name="line.52"></a>
+<span class="sourceLineNo">052</span>   * @throws                            CoreMidiException if there is a problem sending the message<a name="line.52"></a>
 <span class="sourceLineNo">053</span>   */<a name="line.53"></a>
 <span class="sourceLineNo">054</span><a name="line.54"></a>
 <span class="sourceLineNo">055</span>  public void send(int destinationEndPointReference, MidiMessage message, long timestamp) throws CoreMidiException {<a name="line.55"></a>
@@ -91,34 +91,42 @@
 <span class="sourceLineNo">083</span><a name="line.83"></a>
 <span class="sourceLineNo">084</span>  /**<a name="line.84"></a>
 <span class="sourceLineNo">085</span>   * Creates a CoreMIDI output port<a name="line.85"></a>
-<span class="sourceLineNo">086</span>   * <a name="line.86"></a>
-<span class="sourceLineNo">087</span>   * @param clientReference     The MIDI client reference<a name="line.87"></a>
-<span class="sourceLineNo">088</span>   * @param portName                            The name of the output port<a name="line.88"></a>
-<span class="sourceLineNo">089</span>   * <a name="line.89"></a>
-<span class="sourceLineNo">090</span>   * @return                                                            A reference to the created output port<a name="line.90"></a>
+<span class="sourceLineNo">086</span>   * &lt;p&gt;Javah converts the Java function call to a C funtion call using<a name="line.86"></a>
+<span class="sourceLineNo">087</span>   *    the signature <a name="line.87"></a>
+<span class="sourceLineNo">088</span>   *    &lt;code&gt;JNIEXPORT jint JNICALL Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiOutputPort_createOutputPort<a name="line.88"></a>
+<span class="sourceLineNo">089</span>   *    (JNIEnv *, jobject, jint, jstring);&lt;/code&gt;<a name="line.89"></a>
+<span class="sourceLineNo">090</span>   * &lt;/p&gt;<a name="line.90"></a>
 <span class="sourceLineNo">091</span>   * <a name="line.91"></a>
-<span class="sourceLineNo">092</span>   * @throws                                                            CoreMidiException if the port cannot be created<a name="line.92"></a>
-<span class="sourceLineNo">093</span>   * <a name="line.93"></a>
-<span class="sourceLineNo">094</span>   */<a name="line.94"></a>
-<span class="sourceLineNo">095</span><a name="line.95"></a>
-<span class="sourceLineNo">096</span>  private native int createOutputPort(int clientReference, String portName) throws CoreMidiException;<a name="line.96"></a>
-<span class="sourceLineNo">097</span><a name="line.97"></a>
-<span class="sourceLineNo">098</span>  /**<a name="line.98"></a>
-<span class="sourceLineNo">099</span>   * Transmits a MIDI message to the OSX CoreMidi device<a name="line.99"></a>
-<span class="sourceLineNo">100</span>   * <a name="line.100"></a>
-<span class="sourceLineNo">101</span>   * @param midiPortReference              The output MIDI port reference<a name="line.101"></a>
-<span class="sourceLineNo">102</span>   * @param destinationEndPointReference   The device to send the message to<a name="line.102"></a>
-<span class="sourceLineNo">103</span>   * @param message                        The message to send<a name="line.103"></a>
-<span class="sourceLineNo">104</span>   * @param timestamp                      The time at which the message should take effect, in microseconds since the<a name="line.104"></a>
-<span class="sourceLineNo">105</span>   *                                       system booted, with zero meaning immediately.<a name="line.105"></a>
-<span class="sourceLineNo">106</span>   *<a name="line.106"></a>
-<span class="sourceLineNo">107</span>   * @throws                                                                                                                            CoreMidiException<a name="line.107"></a>
+<span class="sourceLineNo">092</span>   * @param clientReference   The MIDI client reference<a name="line.92"></a>
+<span class="sourceLineNo">093</span>   * @param portName          The name of the output port<a name="line.93"></a>
+<span class="sourceLineNo">094</span>   * <a name="line.94"></a>
+<span class="sourceLineNo">095</span>   * @return      A reference to the created output port<a name="line.95"></a>
+<span class="sourceLineNo">096</span>   * <a name="line.96"></a>
+<span class="sourceLineNo">097</span>   * @throws      CoreMidiException if the port cannot be created<a name="line.97"></a>
+<span class="sourceLineNo">098</span>   * <a name="line.98"></a>
+<span class="sourceLineNo">099</span>   */<a name="line.99"></a>
+<span class="sourceLineNo">100</span><a name="line.100"></a>
+<span class="sourceLineNo">101</span>  private native int createOutputPort(int clientReference, String portName) throws CoreMidiException;<a name="line.101"></a>
+<span class="sourceLineNo">102</span><a name="line.102"></a>
+<span class="sourceLineNo">103</span>  /**<a name="line.103"></a>
+<span class="sourceLineNo">104</span>   * Transmits a MIDI message to the OSX CoreMidi device<a name="line.104"></a>
+<span class="sourceLineNo">105</span>   * &lt;p&gt;Javah converts the Java method call to a C function call using the signature.<a name="line.105"></a>
+<span class="sourceLineNo">106</span>   *    &lt;code&gt;JNIEXPORT void JNICALL Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiOutputPort_sendMidiMessage<a name="line.106"></a>
+<span class="sourceLineNo">107</span>   *    (JNIEnv *, jobject, jint, jint, jobject, jlong);&lt;/code&gt;.  See CoreMidiOutputPort.cpp&lt;/p&gt;<a name="line.107"></a>
 <span class="sourceLineNo">108</span>   * <a name="line.108"></a>
-<span class="sourceLineNo">109</span>   */<a name="line.109"></a>
-<span class="sourceLineNo">110</span><a name="line.110"></a>
-<span class="sourceLineNo">111</span>  private native void sendMidiMessage(int midiPortReference, int destinationEndPointReference, MidiMessage message, long timestamp) throws CoreMidiException;<a name="line.111"></a>
-<span class="sourceLineNo">112</span><a name="line.112"></a>
-<span class="sourceLineNo">113</span>}<a name="line.113"></a>
+<span class="sourceLineNo">109</span>   * @param midiPortReference              The output MIDI port reference<a name="line.109"></a>
+<span class="sourceLineNo">110</span>   * @param destinationEndPointReference   The device to send the message to<a name="line.110"></a>
+<span class="sourceLineNo">111</span>   * @param message                        The message to send<a name="line.111"></a>
+<span class="sourceLineNo">112</span>   * @param timestamp                      The time at which the message should take effect, in microseconds since the<a name="line.112"></a>
+<span class="sourceLineNo">113</span>   *                                       system booted, with zero meaning immediately.<a name="line.113"></a>
+<span class="sourceLineNo">114</span>   *<a name="line.114"></a>
+<span class="sourceLineNo">115</span>   * @throws    CoreMidiException   Thrown if error occurs.<a name="line.115"></a>
+<span class="sourceLineNo">116</span>   * <a name="line.116"></a>
+<span class="sourceLineNo">117</span>   */<a name="line.117"></a>
+<span class="sourceLineNo">118</span><a name="line.118"></a>
+<span class="sourceLineNo">119</span>  private native void sendMidiMessage(int midiPortReference, int destinationEndPointReference, MidiMessage message, long timestamp) throws CoreMidiException;<a name="line.119"></a>
+<span class="sourceLineNo">120</span><a name="line.120"></a>
+<span class="sourceLineNo">121</span>}<a name="line.121"></a>
 
 
 

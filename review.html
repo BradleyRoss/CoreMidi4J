@@ -5,9 +5,19 @@
 <title>Code Review</title>
 </head>
 <body>
-<h2>gh_pages</h2>
-<p>For GitHub, the gh_pages branch contains the documentation for the
-   project.  For my fork, the gh_pages branch can be viewed
+<h2>Links</h2>
+<ul>
+<li><a href="https://www.github.com/DerekCook/CoreMidi4J" target="_blank">
+    https://www.github.com/DerekCook/CoreMidi4J</a> Base repository</li>
+<li><a href="https://www.github.com/BradleyRoss/CoreMidi4J" target="_blank">
+    https://www.github.com/BradleyRoss/CoreMidi4J</a> My forked repository</li>
+<li><a href="http://bradleyross.github.io/CoreMidi4J" target="_blank">
+    http://bradleyross.github.io/CoreMidi4J</a> Documentation branch (gh-pages)
+    for my fork.</li>
+</ul>
+<h2>gh-pages</h2>
+<p>For GitHub, the gh-pages branch contains the documentation for the
+   project.  For my fork, the ghpages branch can be viewed
    using <a href="http://bradleyross.github.io/CoreMidi4J" target="_blank">
    http://bradleyross.github.io/CoreMidi4J</a>.  You might want to 
    consider setting up such a branch for your project.</p>
@@ -27,15 +37,37 @@
    this would require changes to the other C++ source files and headers.  I therefore feel 
    that you should remove the execution of javah from the pom.xml configuration.  Since
    any changes in the results will mean changes to the C code, the use of javah
-   should be part of a manual step.</p>
+   should be part of a manual step.  A bash shell script in the directory might
+   be best.</p>
 <h2>dOxygen</h2>
 <p><a href="http://www.doxygen.org" target="_blank">dOxygen</a> is a documenting
    tool for C-like languages.  You can download the dOxygen program from the
    website and then run it against the source code in the Native folder to
    get a set of documentation.</p>
-<p>I'm still trying to figure out how to limit the filenames to avoid the full
-   name with all directories.  (I'm using a new version of dOxygen and running it 
-   differently.  See</p>
+<p>I have placed a file Doxygn in Native/CoreMidi4J that contains the options for
+   running Doxygen.  You can read this file from within Doxygen to set up the 
+   configuration.  You will have to change the following parameters to match the
+   file structure on your system.
+<ul>
+<li>Source directory - This is the directory containing the C++ source (cpp) and
+     header files (h) files.</li>
+<li>Destination directory - This is the directory into which you want the documentation
+    to be generated.  The root file for the documentation is <code>html/index.html</code>
+    with all of the files contained in the html subdirectory.</li>
+<li>Working directory - This is the directory used for the generation of temporary files.</li>
+<h2>pom.xml</h2>
+<p>I have some questions about some of the items in the <code>pom.xml</code> file.  It looks'
+   like some of the plugins may not be used, and others have questionable parameters.</p>
+<h2>Temporary Directory</h2>
+<p>The code for creating the temporary directory and moving the dynamically linked library there
+   looks like some modifications would help reliability.  I will expand this section when I
+   look at it a little more.
+<h2>Possible System Dependencies</h2>
+<p>The file <code>Native/CoreMidi4J/java_home is a pointer to the home directory of your JDK
+   (Java Development Kit).  Depending on your development system configuration, it may be 
+   necessary this file to point to the correct directory.</p>
+</ul>
+<h2>References</h2>
 <ul>
 <li><a href="https://stackoverflow.com/questions/6261366/relative-files-paths-in-doxygen-generated-documentation" target="_blank">
     https://stackoverflow.com/questions/6261366/relative-files-paths-in-doxygen-generated-documentation</a></li>

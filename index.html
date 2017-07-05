@@ -16,11 +16,18 @@
 <li><a href="http://bradleyross.github.io/CoreMidi4J" target="_blank">
     http://bradleyross.github.io/CoreMidi4J</a>This link displays the contents of the documentation
     (gh_pages branch) for my fork.  (that is this page)</li>
-<li><a href="doxygen/html/index.html" target="_blank">dOxygen documentation for Objective-C and C++ code.</a></li>
+<li><a href="doxygen/html/index.html" target="_blank">dOxygen documentation</a> for Objective-C and C++ code
+    for my fork.</li>
 <li><a href="apidocs/index.html" target="_blank">Javadoc documentation for Java code.</a></li>
 </ul>
 <p>The following pages contain some information about building the project.</p>
 <ul>
+<li>After setting the current directory to the directory containing the pom.xml file
+    for the Maven project, the project is built using the command
+    <code>mvn clean compile javadoc:javadoc package</code>.  The dOxygen documentation
+    is created using the dOxygen appliction as a manual step.<//li>
+<li>The Maven step involving the generation of the header files was removed since this
+    is part of the source code development process rather than the build process.</li>
 <li><a href="review.html" target="_blank">review.html</a> This is a list of comments
     I'm collecting on the code.</li>
 <li><a href="CreatingDocumentation.html" target="_blank">CreatingDocumentation.html</a>

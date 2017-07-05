@@ -1,0 +1,50 @@
+\hypertarget{_core_midi_output_port_8cpp}{
+\section{CoreMidiOutputPort.cpp File Reference}
+\label{_core_midi_output_port_8cpp}\index{CoreMidiOutputPort.cpp@{CoreMidiOutputPort.cpp}}
+}
+{\ttfamily \#include \char`\"{}CoreMidiOutputPort.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}CoreMidi4J.h\char`\"{}}\par
+{\ttfamily \#include \char`\"{}CoreMidi4JUtilities.h\char`\"{}}\par
+{\ttfamily \#include $<$iostream$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$mach/mach.h$>$}\par
+{\ttfamily \#include $<$mach/mach\_\-time.h$>$}\par
+{\ttfamily \#include $<$CoreMIDI/CoreMIDI.h$>$}\par
+{\ttfamily \#include $<$CoreServices/CoreServices.h$>$}\par
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+JNIEXPORT jint JNICALL \hyperlink{_core_midi_output_port_8cpp_a72ffe3ebd7286168657950d96de2ac66}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort} (JNIEnv $\ast$env, jobject obj, jint clientReference, jstring portName)
+\item 
+JNIEXPORT void JNICALL \hyperlink{_core_midi_output_port_8cpp_adec7551df56777fc59828a35a3efc256}{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage} (JNIEnv $\ast$env, jobject obj, jint outputPortReference, jint endPointReference, jobject midiMessage, jlong timestamp)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_core_midi_output_port_8cpp_a72ffe3ebd7286168657950d96de2ac66}{
+\index{CoreMidiOutputPort.cpp@{CoreMidiOutputPort.cpp}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort}!CoreMidiOutputPort.cpp@{CoreMidiOutputPort.cpp}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT jint JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-createOutputPort (JNIEnv $\ast$ {\em env}, \/  jobject {\em obj}, \/  jint {\em clientReference}, \/  jstring {\em portName})}}
+\label{_core_midi_output_port_8cpp_a72ffe3ebd7286168657950d96de2ac66}
+Title: CoreMIDI4J Description: Core MIDI Device Provider for Java on OS X Copyright: Copyright (c) 2015-\/2016 Company: x.factory Librarians
+
+\begin{DoxyAuthor}{Author}
+Derek Cook
+\end{DoxyAuthor}
+CoreMIDI4J is an open source Service Provider Interface for supporting external MIDI devices on MAC OS X
+
+This file is part of the XCODE project that provides the native implementation of CoreMIDI4J
+
+CREDITS -\/ This library uses principles established by OSXMIDI4J, but converted so it operates at the JNI level with no additional libraries required 
+
+Definition at line 41 of file CoreMidiOutputPort.cpp.
+
+\hypertarget{_core_midi_output_port_8cpp_adec7551df56777fc59828a35a3efc256}{
+\index{CoreMidiOutputPort.cpp@{CoreMidiOutputPort.cpp}!Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage}}
+\index{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage@{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage}!CoreMidiOutputPort.cpp@{CoreMidiOutputPort.cpp}}
+\subsubsection[{Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage}]{\setlength{\rightskip}{0pt plus 5cm}JNIEXPORT void JNICALL Java\_\-uk\_\-co\_\-xfactorylibrarians\_\-coremidi4j\_\-CoreMidiOutputPort\_\-sendMidiMessage (JNIEnv $\ast$ {\em env}, \/  jobject {\em obj}, \/  jint {\em outputPortReference}, \/  jint {\em endPointReference}, \/  jobject {\em midiMessage}, \/  jlong {\em timestamp})}}
+\label{_core_midi_output_port_8cpp_adec7551df56777fc59828a35a3efc256}
+
+
+Definition at line 86 of file CoreMidiOutputPort.cpp.
+
