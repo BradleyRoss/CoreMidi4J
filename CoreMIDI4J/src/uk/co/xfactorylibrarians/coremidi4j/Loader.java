@@ -96,9 +96,9 @@ public class Loader {
    *    </p>
    * @return The temporary directory for the native library.
    * 
-   * @throws CoreMidiException  Thrown if MIDI error occurs.
    * @see java.io.File#delete()
    * @see java.io.File#deleteOnExit()
+   * @throws CoreMidiException if there is a problem communicating with CoreMIDI
    * 
    */
   
@@ -147,21 +147,16 @@ public class Loader {
   private static void copy(final InputStream input, final File output) throws IOException {
 
     final byte[] buffer = new byte[BUFFER_SIZE];
-    final FileOutputStream stream = new FileOutputStream(output);
 
-    try {
+    try (FileOutputStream stream = new FileOutputStream(output)) {
 
       int read;
 
-      while ( ( read = input.read(buffer) ) != -1 ) {
+      while ((read = input.read(buffer)) != -1) {
 
         stream.write(buffer, 0, read);
 
       }
-
-    } finally {
-
-      stream.close();
 
     }
     
@@ -172,7 +167,7 @@ public class Loader {
    *
    * @return The absolute path to the existing or extracted library.
    * 
-   * @throws CoreMidiException Thrown if MIDI problem is encountered.
+   * @throws CoreMidiException if there is a problem finding the library
    */
   
   private static String locateLibrary() throws CoreMidiException {

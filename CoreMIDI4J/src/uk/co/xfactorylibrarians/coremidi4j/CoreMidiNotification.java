@@ -1,4 +1,4 @@
-/**
+/*
  * Title:        CoreMIDI4J
  * Description:  Core MIDI Device Provider for Java on OS X
  * Copyright:    Copyright (c) 2015-2016
@@ -28,6 +28,6 @@ public interface CoreMidiNotification {
    * 
    */
 
-  public void midiSystemUpdated() throws CoreMidiException;
+  void midiSystemUpdated() throws CoreMidiException;
 
 }

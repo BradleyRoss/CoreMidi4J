@@ -1,4 +1,4 @@
-/**
+/*
  * Title:        CoreMIDI4J
  * Description:  Core MIDI Device Provider for Java on OS X
  * Copyright:    Copyright (c) 2015-2016
@@ -26,7 +26,7 @@ public class CoreMidiClient {
 
   private final int midiClientReference;
 
-  private List<CoreMidiNotification> notificationListeners = new ArrayList<CoreMidiNotification>();
+  private final List<CoreMidiNotification> notificationListeners = new ArrayList<CoreMidiNotification>();
 
   /**
    * Constructor for class
@@ -141,7 +141,7 @@ public class CoreMidiClient {
   ///// JNI Interfaces
   //////////////////////////////
 
-  /**
+  /*
    * Static initializer for loading the native library
    *
    */
