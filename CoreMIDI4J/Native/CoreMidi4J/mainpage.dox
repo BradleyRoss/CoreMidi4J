@@ -1,0 +1,74 @@
+/** \mainpage CoreMidi4J
+ *
+ *  The purpose of the CoreMidi4J software is to provide a JNI interface to the
+ *  CoreMidi library in Mac OS X.  
+ *
+ * <h2>References</h2>
+ *  - Apple CoreMidi docoumentation is located 
+ *    at <A HREF="https://developer.apple.com/documentation/coremidi" target="_blank">
+ *    https://developer.apple.com/documentation/coremidi</A>.
+ *  - dOxygen documentation is located at <A HREF="http://www.doxygen.org" target="_blank">
+ *    http://www.doxygen.org</A>.
+ *  - See <A HREF="http://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/functions.html" target="_blank">
+ *    http://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/functions.html</A> for some information on the
+ *    C functions used by JNI.
+ *
+ * <h2>JNI methods</h2>
+ *
+ *  The following is a list of the C and Java signatures for the native methods.  
+ *
+ * <h3>CoreMidiClient</h3>
+ *
+ * -     The Java signature <code>int CoreMidiClient.createClient(String) is associated with'
+ *       the C signnature <code>JNIEXPORT jint JNICALL ...CoreMidiClient_createClient(JNIEnv *, jobject, jstring)</code>
+ * -     JNIEXPORT void JNICALL ...CoreMidiClient_disposeClient(JNIEnv *, jobject, jint);
+ *
+ * <h3>CoreMidiDestination</h3>
+ *
+ * -     The Javasignature <code>long CoreMidiDestination.getMicroSecondTime()</code> is associated with
+         the C signature <code>JNIEXPORT jlong ...CoreMidiDestination_getMicroSecondTime(JNIEnv *, jobject)</code>
+ *
+ * <h3>CoreMidiDeviceProvider</h3>
+ *
+ * -     The Java signature <code>int CoreMidiDeviceProvider.getNumberOfDestinations()</code> 
+ *       is associated with the
+ *       C signature <code>JNIEXPORT jint JNICALL ...CoreMidiDeviceProvider_getNumberOfSources
+ *       (JNIEnv *, jobject)</code>
+ *
+ * -     The Java signature <code>int CoreMidiDeviceProvider.getNumberOfDestinations()</code>
+ *       is associated with the C signature 
+ *       <code>JNIEXPORT jint JNICALL ...CoreMidiDeviceProvider_getNumberOfDestinations(JNIEnv *, jobject)</code>
+ *
+ * -     The Java signature <code>int CoreMidiDeviceProvider.getSource(int)</code>
+ *       is associated with the C signature
+ *       <code>JNIEXPORT jint JNICALL ...CoreMidiDeviceProvider_getSource(JNIEnv *, jobject, jint)</code>
+ * -     The Java signature <code>int CoreMidiDeviceProvider.getDestination(int)<code> is associated
+ *       with the C signature <code>JNIEXPORT jint JNICALL ...CoreMidiDeviceProvider_getDestination
+ *       (JNIEnv *, jobject, jint)</code>
+ * -     The Java signatue <code>int CoreMidiDeviceProvider.getUniqueId(int)</code>
+ *       is associated with the C signature
+ *       <code>JNIEXPORT jint JNICALL ...CoreMidiDeviceProvider_getUniqueID(JNIEnv *, jobject, jint);</code>
+ *
+ * <h3>CoreMidiInputPort</h3>
+ *
+ * -     JNIEXPORT jint JNICALL ...CoreMidiInputPort_createInputPort(JNIEnv *, jobject, jint, jstring);
+ *
+ * -     JNIEXPORT jlong JNICALL ...CoreMidiInputPort_midiPortConnectSource(JNIEnv *, jobject, jint, jobject);
+ *
+ * -     JNIEXPORT void JNICALL ...CoreMidiInputPort_midiPortDisconnectSource(JNIEnv *, jobject, jint, jlong, jobject);
+ *
+ * <h3>CoreMidiOutputPort</h3>
+ *
+ * -     JNIEXPORT jint JNICALL ...CoreMidiOutputPort_createOutputPort(JNIEnv *, jobject, jint, jstring);
+ *
+ * -     JNIEXPORT void JNICALL ...CoreMidiOutputPort_sendMidiMessage(JNIEnv *, jobject, jint, jint, jobject, jlong);
+ *
+ * <h3>CoreMidiSource</h3>
+ *
+ * -     The Java signature <code>long CoreMidi.Source()</code> is associated with
+ *       C signature <code>JNIEXPORT jlong JNICALL ...CoreMidiSource_getMicroSecondTime(JNIEnv *, jobject)</code>
+ *
+ * <h2>Special macros</h2>
+ * <h3>JNICALL</h3>
+ * <h3>JNIEXPORT</h3>
+ */

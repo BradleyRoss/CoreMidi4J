@@ -41,7 +41,7 @@ public class CoreMidiDeviceProvider extends MidiDeviceProvider implements CoreMi
   /**
    * Initialises the system
    * 
-   * @throws CoreMidiException 
+   * @throws CoreMidiException Thrown if error occurs.
    * 
    */
 
@@ -82,7 +82,7 @@ public class CoreMidiDeviceProvider extends MidiDeviceProvider implements CoreMi
   /**
    * Builds the device map
    * 
-   * @throws CoreMidiException
+   * @throws CoreMidiException Thrown if error occurs
    * 
    */
 
@@ -148,13 +148,13 @@ public class CoreMidiDeviceProvider extends MidiDeviceProvider implements CoreMi
    * 
    * @return	The CoreMidiClient object 
    * 
-   * @throws 	CoreMidiException
+   * @throws 	CoreMidiException Thrown if error occurs
    * 
    */
 
   static CoreMidiClient getMIDIClient() throws CoreMidiException {
 
-    // If the client has not been initialised then we need to setup the static fields in the class
+    // If the client has not been initialized then we need to setup the static fields in the class
     if (midiProperties.client == null) {
 
       new CoreMidiDeviceProvider().initialise();
@@ -174,7 +174,7 @@ public class CoreMidiDeviceProvider extends MidiDeviceProvider implements CoreMi
 
   static CoreMidiOutputPort getOutputPort() {
 
-    // If the client has not been initialised then we need to setup the static fields in the class
+    // If the client has not been initialized then we need to setup the static fields in the class
     if (midiProperties.output == null) {
 
       try {
@@ -519,11 +519,11 @@ public class CoreMidiDeviceProvider extends MidiDeviceProvider implements CoreMi
   /**
    * Gets the unique ID for an object reference
    * 
-   * @param reference 	The reference to the object to get the UID for 
+   * @param reference   The reference to the object to get the UID for 
    * 
-   * @return						The UID of the referenced object
+   * @return    The UID of the referenced object
    * 
-   * @throws 						CoreMidiException 
+   * @throws     CoreMidiException  Thrown if MIDI error occurs.
    * 
    */
 

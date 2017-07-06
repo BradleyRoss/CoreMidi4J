@@ -53,7 +53,7 @@ public class CoreMidiSource implements MidiDevice {
    *
    * @param info a CoreMidiDeviceInfo object providing details of the MIDI interface
    * 
-   * @throws CoreMidiException
+   * @throws CoreMidiException Thrown if MIDI error occurs.
    * 
    */
 
@@ -255,6 +255,9 @@ public class CoreMidiSource implements MidiDevice {
    * Gets a transmitter for this device (which is also added to the internal list
    *
    * @return a transmitter for this device
+   * 
+   * @throws MidiUnavailableException   Thrown if MIDI services unavailable.
+   * 
    * 
    * @see javax.sound.midi.MidiDevice#getTransmitter()
    * 
@@ -552,7 +555,7 @@ public class CoreMidiSource implements MidiDevice {
    *
    * @return The constructed SYSEX message
    * 
-   * @throws InvalidMidiDataException
+   * @throws InvalidMidiDataException  Thrown if MIDI data malformed.
    * 
    */
 
@@ -602,7 +605,7 @@ public class CoreMidiSource implements MidiDevice {
    *
    * @return 							The number of bytes consumed from the packet by the SYSEX message.
    * 
-   * @throws 							InvalidMidiDataException 
+   * @throws     InvalidMidiDataException   Thrown if MIDI data malformed.
    * 
    */
 

@@ -22,7 +22,7 @@
 #include "CoreMidi4J.h"
 #include <CoreMIDI/CoreMIDI.h>
 
-/*
+/**
  * Helper function for throwing exceptions to Java
  *
  * @param env           The JNI environment
@@ -35,7 +35,7 @@
 
 void ThrowException(JNIEnv *env, CFStringRef function, OSStatus status);
 
-/*
+/**
  * Helper function that prints out JNI Status Codes
  *
  * @param status	The status value to print
@@ -47,11 +47,24 @@ void printJniStatus(int status);
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Type Definitions
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @struct
+ * @brief structure used for Call Back parameters
 
+ */
+ 
 typedef struct midiCallBackParameters {
-
-  JavaVM   *jvm;       // The JVM Reference
+  /**
+   *     pointer to Java Virtual Machine
+   */
+  JavaVM   *jvm;       // Pointer to Java Virtual Machine
+  /**
+   *      pointer to Java object associated with this call
+   */
   jobject   object;    // The Java object that will be called
+  /**
+   *    Java messageCallback method to be used
+   */
   jmethodID methodID;  // The Java messageCallback method that will be called
 
 } MIDI_CALLBACK_PARAMETERS;

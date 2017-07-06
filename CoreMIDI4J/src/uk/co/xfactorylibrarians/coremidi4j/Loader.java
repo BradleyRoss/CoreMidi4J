@@ -13,7 +13,10 @@ import java.net.URL;
  * of having to install it on their system. Arranges for that directory to be deleted when
  * we exit.
  *
- * Inspired by the techniques used by usb4java, and the loader written by Klaus Raimer, k@ailis.de
+ * <p>Inspired by the techniques used by usb4java, and the loader written by Klaus Raimer, k@ailis.de .
+ *    See <a href="http://usb4java.org/" target="_blank">http://usb4java.org</a> for the web site
+ *    for the project and <a href="https://github.com/usb4java/usb4java" target="_blank">
+ *    https://github.com/usb4java/usb4java</a> for the GitHub repository.</p>
  *
  * @author James Elliott
  */
@@ -43,8 +46,10 @@ public class Loader {
 
   /**
    * Check that we are running on Mac OS X.
+   *
    * 
-   * @return true if thr OS is OS X, otherwise false
+   * 
+   * @return true if the OS is OS X, otherwise false
    * 
    */
   
@@ -78,9 +83,22 @@ public class Loader {
    * Creates the temporary directory used for unpacking the native library.
    * This directory is marked to be deleted when the JVM exits.
    *
+   *<p>This requires review.  There is a method java.nio.file.Files.createTempDirectory
+   *   that creates a temporary directory.  However, 
+   *   java.io.File.createTempFile(String,String) creates a file in the
+   *   default temp directory.</p>
+   * <p>This method creates a temporary directory named coreMidi4J in the default
+   *    temp directory.  Other code then places the dynamically linked library in 
+   *    the coreMidi4J directory.  Both the dynamically linked library file and the
+   *    directory use {@link java.io.File#deleteOnExit()}.  This should work since they will be
+   *    deleted in reverse order.  However, unexpected crashes could leave the system
+   *    in a bad state where some files are not deleted.  
+   *    </p>
    * @return The temporary directory for the native library.
    * 
-   * @throws CoreMidiException 
+   * @throws CoreMidiException  Thrown if MIDI error occurs.
+   * @see java.io.File#delete()
+   * @see java.io.File#deleteOnExit()
    * 
    */
   
@@ -154,7 +172,7 @@ public class Loader {
    *
    * @return The absolute path to the existing or extracted library.
    * 
-   * @throws CoreMidiException 
+   * @throws CoreMidiException Thrown if MIDI problem is encountered.
    */
   
   private static String locateLibrary() throws CoreMidiException {

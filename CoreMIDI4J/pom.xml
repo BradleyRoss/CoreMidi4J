@@ -69,6 +69,12 @@
   <build>
     <sourceDirectory>src</sourceDirectory>
     <resources>
+      <!--
+             The only file in resources is resources/META-INF/services/javax.sound.midi.spi.MidiDeviceProvider
+             This is a txt file and the only line in this file reads
+                uk.co.xfactotrylibrarians.coremidi4j.CoreMidiDeviceProvider
+             See https://docs.oracle.com/javase/tutorial/ext/basics/spi.html
+       -->
       <resource>
         <directory>resources</directory>
       </resource>
@@ -76,6 +82,11 @@
 
     <plugins>
       <plugin>
+        <!-- 
+               See http://maven.apache.org/components/enforcer/maven-enforcer-plugin/enforce-mojo.html
+               I don't see any mention of what rules are being enforced
+               This belongs to validate phase
+         -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-enforcer-plugin</artifactId>
         <version>1.4.1</version>
@@ -111,6 +122,39 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.6.0</version>
         <executions>
+          <!--  
+                There is a complaint by Eclipse that the exec-maven-plugin 
+                Plugin execution not covered by lifecycle configuration.
+                
+                https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+                http://www.mojohaus.org/exec-maven-plugin/usage.html
+                http://maven.apache.org/ref/3.3.3/maven-core/lifecycles.html
+                http://www.avajava.com/tutorials/lessons/how-do-i-download-a-plugin-from-a-remote-archiva-repository.html
+                https://stackoverflow.com/questions/19633505/maven-generated-sources-not-compiled
+                https://stackoverflow.com/questions/10935593/maven-how-to-add-resources-which-are-generated-after-compilation-phase
+                https://stackoverflow.com/questions/9752972/how-to-add-an-extra-source-directory-for-maven-to-compile-and-include-in-the-bui
+                http://www.mojohaus.org/maven-native/native-maven-plugin/javah-mojo.html
+                
+                
+                From the Introduction to the Lifecycle it would appear that the creation of
+                the dynamic library should be in the generate-resources phase and the
+                movement of the library to the resources should be in the 
+                process-resources stage.  Perhaps the generation of the shims 
+                should be in the generate-sources phase
+                
+                Looking at some other GitHub projects it would appear that files produced
+                dynamically by the phases are often placed in 
+                
+                ./target/generated-java
+                ./target/generated-resources
+                ./target/generated-sources
+                ./target/generated-test-sources
+                
+                Use    find . -name "*generated*" -exec ls -R \;
+                
+                
+          -->
+          <!--
           <execution>
             <id>create-jni-header</id>
             <phase>process-classes</phase>
@@ -135,7 +179,7 @@
               </arguments>
             </configuration>
           </execution>
-
+          -->
           <execution>
             <id>build-native-library</id>
             <phase>prepare-package</phase>
@@ -155,6 +199,11 @@
       </plugin>
 
       <plugin>
+        <!-- 
+            This step copies the dynamic library created
+            during the execution of the XCode build into 
+            the jar file.
+         -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <version>3.0.2</version>
@@ -233,14 +282,24 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>2.10.4</version>
+        <!--
         <executions>
           <execution>
             <id>attach-javadocs</id>
             <goals>
               <goal>jar</goal>
             </goals>
+            <configuration>
+              <linksource>true</linksource>
+              <show>private</show>
+            </configuration>
           </execution>
         </executions>
+        -->
+        <configuration>
+          <linksource>true</linksource>
+          <show>private</show>
+        </configuration>
       </plugin>
 
       <plugin>
@@ -258,6 +317,9 @@
       </plugin>
 
       <plugin>
+        <!-- 
+              See maven-gpg-plugin
+         -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
         <version>1.6</version>

@@ -117,7 +117,7 @@ public class CoreMidiInputPort {
    * 
    * @return												A memory handle for the parameters the native side has associated with this call 
    * 
-   * @throws 												CoreMidiException 
+   * @throws 												CoreMidiException Thrown if error occurs.
    * 
    */
 
@@ -126,11 +126,11 @@ public class CoreMidiInputPort {
   /**
    * Disconnects a source end point to a MIDI input
    * 
-   * @param inputPortReference			The reference to an input port
-   * @param memoryReference 				The memory handle that can now be released.
-   * @param sourceDevice						The source device that wishes to disconnect from the port
+   * @param inputPortReference   The reference to an input port
+   * @param memoryReference      The memory handle that can now be released.
+   * @param sourceDevice         The source device that wishes to disconnect from the port
    * 
-   * @throws 												CoreMidiException 
+   * @throws   	CoreMidiException Thrown if error occurs
    * 
    */
 

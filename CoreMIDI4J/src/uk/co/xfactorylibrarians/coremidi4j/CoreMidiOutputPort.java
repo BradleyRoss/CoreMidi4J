@@ -28,10 +28,10 @@ public class CoreMidiOutputPort {
   /**
    * Constructor
    * 
-   * @param clientReference	The client reference
-   * @param portName				The name of the port
+   * @param clientReference	   The client reference
+   * @param portName           The name of the port
    *  
-   * @throws 								CoreMidiException if there is a problem creating the port
+   * @throws           CoreMidiException if there is a problem creating the port
    * 
    */
 
@@ -45,11 +45,11 @@ public class CoreMidiOutputPort {
    * Sends a MIDI message on this output port to the specified destination end point
    * 
    * @param destinationEndPointReference	The destination end point to send the message to
-   * @param message												The message to send
+   * @param message				The message to send
    * @param timestamp                     The time at which the message should take effect, in microseconds since the
    *                                      system booted, with 0 meaning "immediately".
    * 
-   * @throws 															CoreMidiException if there is a problem sending the message
+   * @throws 				CoreMidiException if there is a problem sending the message
    */
 
   public void send(int destinationEndPointReference, MidiMessage message, long timestamp) throws CoreMidiException {
@@ -83,13 +83,18 @@ public class CoreMidiOutputPort {
 
   /**
    * Creates a CoreMIDI output port
+   * <p>Javah converts the Java function call to a C funtion call using
+   *    the signature 
+   *    <code>JNIEXPORT jint JNICALL Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiOutputPort_createOutputPort
+   *    (JNIEnv *, jobject, jint, jstring);</code>
+   * </p>
    * 
-   * @param clientReference	The MIDI client reference
-   * @param portName 				The name of the output port
+   * @param clientReference   The MIDI client reference
+   * @param portName          The name of the output port
    * 
-   * @return								A reference to the created output port
+   * @return      A reference to the created output port
    * 
-   * @throws 								CoreMidiException if the port cannot be created
+   * @throws      CoreMidiException if the port cannot be created
    * 
    */
 
@@ -97,6 +102,9 @@ public class CoreMidiOutputPort {
 
   /**
    * Transmits a MIDI message to the OSX CoreMidi device
+   * <p>Javah converts the Java method call to a C function call using the signature.
+   *    <code>JNIEXPORT void JNICALL Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiOutputPort_sendMidiMessage
+   *    (JNIEnv *, jobject, jint, jint, jobject, jlong);</code>.  See CoreMidiOutputPort.cpp</p>
    * 
    * @param midiPortReference              The output MIDI port reference
    * @param destinationEndPointReference   The device to send the message to
@@ -104,7 +112,7 @@ public class CoreMidiOutputPort {
    * @param timestamp                      The time at which the message should take effect, in microseconds since the
    *                                       system booted, with zero meaning immediately.
    *
-   * @throws 																CoreMidiException
+   * @throws    CoreMidiException   Thrown if error occurs.
    * 
    */
 
