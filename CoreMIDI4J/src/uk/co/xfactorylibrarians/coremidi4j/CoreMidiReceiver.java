@@ -31,7 +31,7 @@ public class CoreMidiReceiver implements MidiDeviceReceiver {
 
 
   /**
-   * CoreMidiReceicer constructor
+   * CoreMidiReceiver constructor
    * 
    * @param device	The MIDI device that contains the information required to send MIDI data via OSX core MIDI
    */

@@ -28,21 +28,24 @@ import javax.sound.midi.Receiver;
 import javax.sound.midi.Transmitter;
 
 /**
- * CoreMidiDestination - implementation for Apple CoreMIDI
+ * CoreMidiDestination - implementation for MidiDevice
+ * that can have any number of receivers but no transmitters.
+ * 
+ *  @see Core MidiSource
  *
  */
 
 public class CoreMidiDestination implements MidiDevice {
 
   private final CoreMidiDeviceInfo info;
-  private final AtomicBoolean isOpen;  // Tracks whether we are conneted to CoreMIDI and can be used
+  private final AtomicBoolean isOpen;  // Tracks whether we are connected to CoreMIDI and can be used
   private final AtomicLong startTime;  // The system time in microseconds when the port was opened
   private final Set<CoreMidiReceiver> receivers;
 
   /**
    * Default constructor. 
    * 
-   * @param info	a CoreMidiDeviceInfo object providing details of the MIDI interface
+   * @param info	 CoreMidiDeviceInfo object providing details of the MIDI interface
    * 
    */
 
@@ -121,7 +124,6 @@ public class CoreMidiDestination implements MidiDevice {
    * @return true if the device is open, otherwise false;
    *  
    */
-
   @Override
   public boolean isOpen() {
 

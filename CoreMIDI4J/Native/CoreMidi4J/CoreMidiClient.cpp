@@ -27,8 +27,12 @@ MIDI_CALLBACK_PARAMETERS *g_callbackParameters;
 // Callback function for CoreMidiClient
 /////////////////////////////////////////////////////////
 
-/*
- * The native callback that is called when a MIDINotification message is received
+/**
+ * @brief The native callback that is called when a MIDINotification message is received
+ *
+ * The specification that this method is to be called when the MIDI specification 
+ * is changed is contained in the creation of the MIDI client by the function
+ * MIDIClientCreate in Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiClient_createClient.
  *
  * @param message					A pointer to the MIDINotification message.
  * @param notifyRefCon		The refCon pointer provided to MIDIClientCreate
@@ -91,7 +95,7 @@ void notifyCallback(const MIDINotification *message, void *notifyRefCon) {
 // Native functions for CoreMidiClient
 /////////////////////////////////////////////////////////
 
-/*
+/**
  * Creates a MIDI client reference
  *
  * Class:     com_coremidi4j_CoreMidiClient
@@ -159,7 +163,7 @@ JNIEXPORT jint JNICALL Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiClient_c
 
 }
 
-/*
+/**
  * Disposes of a MIDI client reference
  *
  * Class:     com_coremidi4j__CoreMidiClient

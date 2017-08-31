@@ -170,7 +170,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rm java_home\nln -s `/usr/libexec/java_home` java_home";
+			shellScript = "\nJAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home\nrm java_home\n# ln -s `/usr/libexec/java_home` java_home\nln -s ${JAVA_HOME} java_home";
 		};
 /* End PBXShellScriptBuildPhase section */
 

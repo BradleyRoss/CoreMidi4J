@@ -6,6 +6,7 @@
  *
  * @author Derek Cook
  *
+ *
  * CoreMIDI4J is an open source Service Provider Interface for supporting external MIDI devices on MAC OS X
  *
  * This file is part of the XCODE project that provides the native implementation of CoreMIDI4J

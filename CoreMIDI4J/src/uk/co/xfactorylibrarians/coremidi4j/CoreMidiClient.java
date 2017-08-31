@@ -78,8 +78,11 @@ public class CoreMidiClient {
   }
 
   /**
-   * The message callback for receiving notifications about changes in the MIDI environment from the JNI code
-   * 
+   * The message callback for receiving notifications about changes in the MIDI environment from the JNI code.
+   * <p>A reference to this method is created by the C++ method
+   *    Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiClient_createClient
+   *    which in turn is called by {@link #createClient(String) }.</p>
+   *    
    * @throws CoreMidiException if a problem occurs passing along the notification
    * 
    */

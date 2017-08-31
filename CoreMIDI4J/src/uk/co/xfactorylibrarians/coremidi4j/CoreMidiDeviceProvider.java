@@ -468,6 +468,7 @@ public class CoreMidiDeviceProvider extends MidiDeviceProvider implements CoreMi
 
   }
 
+pwd
 
   //////////////////////////////
   ///// JNI Interfaces
@@ -526,7 +527,7 @@ public class CoreMidiDeviceProvider extends MidiDeviceProvider implements CoreMi
   /**
    * Gets the specified MIDI Destination EndPoint
    * 
-   * @param destinationIndex	The index of the destination to get
+   * @param destinationIndex 	The index of the destination to get
    * 
    * @return 									The specified MIDI Destination EndPoint
    * 
@@ -552,7 +553,7 @@ public class CoreMidiDeviceProvider extends MidiDeviceProvider implements CoreMi
   /**
    * Gets a MidiDevice.Info class for the specified reference
    * 
-   * @param reference	The Core MIDI reference to create a MidiDevice.Info class for
+   * @param reference	The Core MIDI endpoint reference to create a MidiDevice.Info class for
    * 
    * @return					The created MidiDevice.Info class
    * 
