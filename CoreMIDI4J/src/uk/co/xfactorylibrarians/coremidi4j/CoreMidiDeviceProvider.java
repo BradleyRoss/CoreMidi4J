@@ -474,7 +474,6 @@ public class CoreMidiDeviceProvider extends MidiDeviceProvider implements CoreMi
 
   }
 
-pwd
 
   //////////////////////////////
   ///// JNI Interfaces
@@ -531,33 +530,33 @@ pwd
   private native int getSource(int sourceIndex) throws CoreMidiException;
 
   /**
-   * Gets the specified MIDI Destination EndPoint
+   * Gets the specified MIDI Destination EndPoint (JNI).
    * 
    * @param destinationIndex 	The index of the destination to get
    * 
-   * @return 									The specified MIDI Destination EndPoint
+   * @return The specified MIDI Destination EndPoint
    * 
-   * @throws 									CoreMidiException if the destination index is not valid 
+   * @throws CoreMidiException if the destination index is not valid 
    * 
    */
 
   private native int getDestination(int destinationIndex) throws CoreMidiException;
 
   /**
-   * Gets the unique ID for an object reference
+   * Gets the unique ID for an object reference (JNI).
    * 
    * @param reference   The reference to the object to get the UID for 
    * 
    * @return    The UID of the referenced object
    * 
-   * @throws 						CoreMidiException if there is a problem communicating with CoreMIDI
+   * @throws CoreMidiException if there is a problem communicating with CoreMIDI
    * 
    */
 
   private native int getUniqueID(int reference) throws CoreMidiException; 
 
   /**
-   * Gets a MidiDevice.Info class for the specified reference
+   * Gets a MidiDevice.Info class for the specified reference (JNI).
    * 
    * @param reference	The Core MIDI endpoint reference to create a MidiDevice.Info class for
    * 

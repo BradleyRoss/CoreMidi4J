@@ -31,7 +31,7 @@ import javax.sound.midi.Transmitter;
  * CoreMidiDestination - implementation for MidiDevice
  * that can have any number of receivers but no transmitters.
  * 
- *  @see Core MidiSource
+ *  @see CoreMidiSource
  *
  */
 

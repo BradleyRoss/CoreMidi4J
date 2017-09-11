@@ -6,7 +6,7 @@
 
   <groupId>uk.co.xfactory-librarians</groupId>
   <artifactId>coremidi4j</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1BR-SNAPSHOT</version>
 
   <packaging>jar</packaging>
 
@@ -155,6 +155,9 @@
                 
           -->
           <!--
+            ...   Start of Commented Out ...
+            ...   Start of Commented Out ...
+            ...   Start of Commented Out ...
           <execution>
             <id>create-jni-header</id>
             <phase>process-classes</phase>
@@ -179,6 +182,9 @@
               </arguments>
             </configuration>
           </execution>
+            ...   End of Commented Out ...
+            ...   Eng of Commented Out ...
+            ...   End  of Commented Out ...
           -->
           <execution>
             <id>build-native-library</id>
@@ -332,6 +338,11 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>2.5.2</version>
       </plugin>
     </plugins>
   </build>
