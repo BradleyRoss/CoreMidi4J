@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Buiding and Installing package</title>
+</head>
+<body>
+<h2>Before Writing Native Code</h2>
+<p>Before writing the Native code, you will need to use <code>javah</code> and
+   <code>javap</code> to get information for the JNI native code.</p>
+<ul>
+<li>If native code is to be called from Java methods possessing the <code>native</code>
+    keyword, you need to run <code>javah</code> against the Java class files.  Since the
+    tools uses the class files rather than the source files, you must run the Java compiler
+    before using the tool.  The result of this is a C language header file (.h) that you 
+    will use as the template for writing the native code.
+    <pre>javah -classpath target/classes uk.co.xfactorylibrarians.coremidi4j.CoreMidiClient \
+     uk.co.xfactorylibrarians.coremidi4j.CoreMidiDestination \ 
+     uk.co.xfactorylibrarians.coremidi4j.CoreMidiDeviceProvider \  
+     uk.co.xfactorylibrarians.coremidi4j.CoreMidiDeviceInfo \
+     uk.co.xfactorylibrarians.coremidi4j.CoreMidiInputPort \
+     uk.co.xfactorylibrarians.coremidi4j.CoreMidiOutputPort \
+     uk.co.xfactorylibrarians.coremidi4j.CoreMidiSource <pre>
+   </li>
+<li>If native code is to call methods and fields from the Java objects, you will need to run
+    <code>javap -s</code> against the Java class files to obtain the method signatures for
+    the Java methods.  Once again, this must be run after compiling the Java source code and
+    before writing the C language code calling the JNI API.
+</ul>
+<p>Any changes to the signatures for <b>any</b> of the Java methods using the <code>native</code>
+   keyword may change the header file for <b>all</b> of the methods using the
+   <code>native</code> keyword in that class.<p>
+<h2>Building Code</h2>
+<p>The following is the set of Maven commands that I used to build the jar file.</p>
+<p><code>mvn clean compile javadoc:javadoc package</code></p>
+<h2>Creating Documentation</h2>
+<p>I am currently using Javadoc to create documentation for the Java classes used in the application.
+   The Javadoc tool is run as part of the Maven build process.</p>
+<p>At this time, I am using Doxygen to create the documentation for the C language files.  I have added a
+   Doxygen configuration file in the project directory (<code>Doxyfile</code>), but you may need to make
+   some changes for your personal development environment.</p>
+<h2>Installing Snapshots in Repository</h2>
+<p><a href="https://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html" target="_blank">
+   See this page for information on how to install a snapshot jar file in your local repository so that
+   you can use it.</a>  If the jar file was created by a recent version of Apache Maven, you can use the 
+   command 
+   <pre><code>mvn install:install-file -Dfile=&lt;path-to-file&gt;</code></pre> where
+   <code>&lt;path-to-file&gt;</code> is the location of the jar file.
+   </p>
+<p>When I created my own snapshot build, I set the version to <code>1.1BR-SNAPSHOT</code>, so that the]
+   artifact can by retrieved as<br />
+&lt;groupId&gt;uk.co.xfactory-librarians&lt;groupId&gt;<br />
+&lt;artifactId&gt;coremidi4j&lt;/artifactId&gt;<br />
+&lt;version&gt;1.1BR-SNAPSHOT&lt;/version&gt;   
+</p>
+</body>
+</html>

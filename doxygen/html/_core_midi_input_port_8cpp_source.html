@@ -77,7 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00051"></a>00051   <span class="keywordtype">int</span> getEnvStat = callbackParameters-&gt;<a class="code" href="structmidi_call_back_parameters.html#a982d768761058a735ec9483e5b70cf1f">jvm</a>-&gt;GetEnv((<span class="keywordtype">void</span> **) &amp;env, NULL);
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053   <span class="comment">// If the ENV is not attached to the current thread then attach it</span>
-<a name="l00054"></a>00054   <span class="keywordflow">if</span> (getEnvStat == JNI_EDETACHED) {
+<a name="l00054"></a>00054   <span class="keywordflow">if</span> ( getEnvStat == JNI_EDETACHED ) {
 <a name="l00055"></a>00055 
 <a name="l00056"></a>00056     <span class="keywordflow">if</span> ( callbackParameters-&gt;<a class="code" href="structmidi_call_back_parameters.html#a982d768761058a735ec9483e5b70cf1f">jvm</a>-&gt;AttachCurrentThread((<span class="keywordtype">void</span> **) &amp;env, NULL) != 0) {
 <a name="l00057"></a>00057 
@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00060"></a>00060 
 <a name="l00061"></a>00061     }
 <a name="l00062"></a>00062 
-<a name="l00063"></a>00063   } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (getEnvStat == JNI_EVERSION) {
+<a name="l00063"></a>00063   } <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( getEnvStat == JNI_EVERSION ) {
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065     std::cout &lt;&lt; <span class="stringliteral">&quot;GetEnv: version not supported&quot;</span> &lt;&lt; std::endl;
 <a name="l00066"></a>00066     <a class="code" href="_core_midi4_j_utilities_8cpp.html#a0bb629d6e7599ae55be3b403e09af09a">ThrowException</a>(env,CFSTR(<span class="stringliteral">&quot;MIDIInput - GetEnv: version not supported&quot;</span>),-1);
@@ -96,7 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00070"></a>00070   <span class="comment">// Loop over all the packets we have received, calling the Java callback for each one.</span>
 <a name="l00071"></a>00071   MIDIPacket *packet = (MIDIPacket *) &amp;packets-&gt;packet[0];
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073   for (<span class="keywordtype">int</span> i = 0; i &lt; packets-&gt;numPackets; i += 1 ) {
+<a name="l00073"></a>00073   for ( <span class="keywordtype">int</span> i = 0; i &lt; packets-&gt;numPackets; i += 1 ) {
 <a name="l00074"></a>00074 
 <a name="l00075"></a>00075     <span class="comment">// Convert the CoreMIDI timestamp from Mach Absolute Time Units to microseconds,</span>
 <a name="l00076"></a>00076     <span class="comment">// as expected by Java MIDI, unless the value was zero, which means &quot;now&quot;.</span>
@@ -276,20 +276,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00252"></a>00252   <span class="comment">// Disconnect this input port from the end port</span>
 <a name="l00253"></a>00253   status = MIDIPortDisconnectSource(inputPortReference, sourceEndPointReference);
 <a name="l00254"></a>00254 
-<a name="l00255"></a>00255   <span class="comment">// Delete the globsal reference to the Java CoreMidiInputPort object</span>
+<a name="l00255"></a>00255   <span class="comment">// Delete the global reference to the Java CoreMidiInputPort object</span>
 <a name="l00256"></a>00256   env-&gt;DeleteGlobalRef(((<a class="code" href="structmidi_call_back_parameters.html">MIDI_CALLBACK_PARAMETERS</a> *) memoryReference)-&gt;<span class="keywordtype">object</span>);
 <a name="l00257"></a>00257 
-<a name="l00258"></a>00258   <span class="comment">// Release the memory block that Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiInputPort_midiPortConnectSource allocated</span>
-<a name="l00259"></a>00259   free((<span class="keywordtype">void</span> *) memoryReference);
-<a name="l00260"></a>00260 
-<a name="l00261"></a>00261   <span class="comment">// If the returned status is non zero then throw an exception</span>
-<a name="l00262"></a>00262   <span class="keywordflow">if</span> ( status != 0) {
-<a name="l00263"></a>00263 
-<a name="l00264"></a>00264     <a class="code" href="_core_midi4_j_utilities_8cpp.html#a0bb629d6e7599ae55be3b403e09af09a">ThrowException</a>(env,CFSTR(<span class="stringliteral">&quot;MIDIPortDisconnectSource&quot;</span>),status);
+<a name="l00258"></a>00258   <span class="comment">//std::cout &lt;&lt; &quot;Trying to release &quot; &lt;&lt; memoryReference &lt;&lt; std::endl;</span>
+<a name="l00259"></a>00259 
+<a name="l00260"></a>00260   <span class="comment">// Release the memory block that Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiInputPort_midiPortConnectSource allocated</span>
+<a name="l00261"></a>00261   free((<span class="keywordtype">void</span> *) memoryReference);
+<a name="l00262"></a>00262 
+<a name="l00263"></a>00263   <span class="comment">// If the returned status is non zero then throw an exception</span>
+<a name="l00264"></a>00264   <span class="keywordflow">if</span> ( status != 0) {
 <a name="l00265"></a>00265 
-<a name="l00266"></a>00266   }
+<a name="l00266"></a>00266     <a class="code" href="_core_midi4_j_utilities_8cpp.html#a0bb629d6e7599ae55be3b403e09af09a">ThrowException</a>(env,CFSTR(<span class="stringliteral">&quot;MIDIPortDisconnectSource&quot;</span>),status);
 <a name="l00267"></a>00267 
-<a name="l00268"></a>00268 }
+<a name="l00268"></a>00268   }
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270 }
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -305,7 +307,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 5 18:54:43 2017 for CoreMidi4J by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Sep 12 17:29:57 2017 for CoreMidi4J by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

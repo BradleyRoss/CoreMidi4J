@@ -54,6 +54,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_core_midi_client_8cpp.html#aee81a99dbd1a08ef7256c0073605aa9c">notifyCallback</a> (const MIDINotification *message, void *notifyRefCon)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The native callback that is called when a MIDINotification message is received.  <a href="#aee81a99dbd1a08ef7256c0073605aa9c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">JNIEXPORT jint JNICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_core_midi_client_8cpp.html#a5b20f72b7ce2e321a1bbaf38076077eb">Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiClient_createClient</a> (JNIEnv *env, jobject obj, jstring clientName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">JNIEXPORT void JNICALL&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="_core_midi_client_8cpp.html#ad81d5eaff1526e10a0c39ae07d0b4a88">Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiClient_disposeClient</a> (JNIEnv *env, jobject obj, jint clientReference)</td></tr>
 <tr><td colspan="2"><h2>Variables</h2></td></tr>
@@ -90,8 +91,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </table>
 </div>
 <div class="memdoc">
+<p>Creates a MIDI client reference</p>
+<p>Class: com_coremidi4j_CoreMidiClient Method: createClient Signature: ()I</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>env</em>&nbsp;</td><td>The JNI environment </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>obj</em>&nbsp;</td><td>The reference to the java object instance that called this native method</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>A reference to the created client</dd></dl>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>CoreMidiException</em>&nbsp;</td><td>if the client cannot be created </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_core_midi_client_8cpp_source.html#l00110">110</a> of file <a class="el" href="_core_midi_client_8cpp_source.html">CoreMidiClient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_core_midi_client_8cpp_source.html#l00114">114</a> of file <a class="el" href="_core_midi_client_8cpp_source.html">CoreMidiClient.cpp</a>.</p>
 
 </div>
 </div>
@@ -125,8 +142,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </table>
 </div>
 <div class="memdoc">
+<p>Disposes of a MIDI client reference</p>
+<p>Class: com_coremidi4j__CoreMidiClient Method: disposeClient Signature: (I)V</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>env</em>&nbsp;</td><td>The JNI environment </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>obj</em>&nbsp;</td><td>The reference to the java object instance that called this native method </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>clientReference</em>&nbsp;</td><td>The client reference to release and dispose</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>CoreMidiException</em>&nbsp;</td><td>if the client cannot be disposed </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="_core_midi_client_8cpp_source.html#l00177">177</a> of file <a class="el" href="_core_midi_client_8cpp_source.html">CoreMidiClient.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_core_midi_client_8cpp_source.html#l00187">187</a> of file <a class="el" href="_core_midi_client_8cpp_source.html">CoreMidiClient.cpp</a>.</p>
 
 </div>
 </div>
@@ -155,7 +188,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="_core_midi_client_8cpp_source.html#l00038">38</a> of file <a class="el" href="_core_midi_client_8cpp_source.html">CoreMidiClient.cpp</a>.</p>
+<p>The native callback that is called when a MIDINotification message is received. </p>
+<p>The specification that this method is to be called when the MIDI specification is changed is contained in the creation of the MIDI client by the function MIDIClientCreate in Java_uk_co_xfactorylibrarians_coremidi4j_CoreMidiClient_createClient.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>message</em>&nbsp;</td><td>A pointer to the MIDINotification message. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>notifyRefCon</em>&nbsp;</td><td>The refCon pointer provided to MIDIClientCreate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="_core_midi_client_8cpp_source.html#l00042">42</a> of file <a class="el" href="_core_midi_client_8cpp_source.html">CoreMidiClient.cpp</a>.</p>
 
 </div>
 </div>
@@ -195,7 +238,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 5 18:54:43 2017 for CoreMidi4J by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Sep 12 17:29:57 2017 for CoreMidi4J by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

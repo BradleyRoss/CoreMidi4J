@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="sourceContainer">
-<pre><span class="sourceLineNo">001</span>/**<a name="line.1"></a>
+<pre><span class="sourceLineNo">001</span>/*<a name="line.1"></a>
 <span class="sourceLineNo">002</span> * Title:        CoreMIDI4J<a name="line.2"></a>
 <span class="sourceLineNo">003</span> * Description:  Core MIDI Device Provider for Java on OS X<a name="line.3"></a>
 <span class="sourceLineNo">004</span> * Copyright:    Copyright (c) 2015-2016<a name="line.4"></a>
@@ -84,7 +84,7 @@
 <span class="sourceLineNo">076</span>  ///// JNI Interfaces<a name="line.76"></a>
 <span class="sourceLineNo">077</span>  //////////////////////////////<a name="line.77"></a>
 <span class="sourceLineNo">078</span><a name="line.78"></a>
-<span class="sourceLineNo">079</span>  /**<a name="line.79"></a>
+<span class="sourceLineNo">079</span>  /*<a name="line.79"></a>
 <span class="sourceLineNo">080</span>   * Static initializer for loading the native library<a name="line.80"></a>
 <span class="sourceLineNo">081</span>   *<a name="line.81"></a>
 <span class="sourceLineNo">082</span>   */<a name="line.82"></a>
@@ -125,7 +125,7 @@
 <span class="sourceLineNo">117</span>   * <a name="line.117"></a>
 <span class="sourceLineNo">118</span>   * @return                                                                                            A memory handle for the parameters the native side has associated with this call <a name="line.118"></a>
 <span class="sourceLineNo">119</span>   * <a name="line.119"></a>
-<span class="sourceLineNo">120</span>   * @throws                                                                                            CoreMidiException Thrown if error occurs.<a name="line.120"></a>
+<span class="sourceLineNo">120</span>   * @throws                                                                                            CoreMidiException if there is a problem connecting the source<a name="line.120"></a>
 <span class="sourceLineNo">121</span>   * <a name="line.121"></a>
 <span class="sourceLineNo">122</span>   */<a name="line.122"></a>
 <span class="sourceLineNo">123</span><a name="line.123"></a>
@@ -138,7 +138,7 @@
 <span class="sourceLineNo">130</span>   * @param memoryReference      The memory handle that can now be released.<a name="line.130"></a>
 <span class="sourceLineNo">131</span>   * @param sourceDevice         The source device that wishes to disconnect from the port<a name="line.131"></a>
 <span class="sourceLineNo">132</span>   * <a name="line.132"></a>
-<span class="sourceLineNo">133</span>   * @throws    CoreMidiException Thrown if error occurs<a name="line.133"></a>
+<span class="sourceLineNo">133</span>   * @throws                                                                                            CoreMidiException if there is a problem disconnecting the source<a name="line.133"></a>
 <span class="sourceLineNo">134</span>   * <a name="line.134"></a>
 <span class="sourceLineNo">135</span>   */<a name="line.135"></a>
 <span class="sourceLineNo">136</span><a name="line.136"></a>

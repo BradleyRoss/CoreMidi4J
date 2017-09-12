@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<ol>
+<li>The Core Java API is not notified when changes are made to the MIDI devices attached to the system.</li>
+<li>The Core Java API does not update the list of devices when MIDI devices are attached or detached from the system.</li>
+<li>does not support System Exclusive messages (from DerekCook/CoreMidi4J web site)</li>
+
+<li>Each call to MidiSystem.getSynthesizer() yields a new object rather than returning the existing
+       synthesizer object.  This also applies to using MidiSystem.getMidiDevice(MidiDevice.Info) for the 
+       MidiDevice.Info for the synthesizer device.  All objects for the MidiDevice synthesizer object
+       return the same MidiDevice.Info object.</li>
+</body>
+</html>
