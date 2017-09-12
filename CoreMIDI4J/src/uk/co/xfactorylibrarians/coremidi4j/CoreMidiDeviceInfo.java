@@ -155,7 +155,15 @@ public class CoreMidiDeviceInfo extends MidiDevice.Info {
     return endPointUniqueID;
 
   }
-
+  /**
+   * Replaced by getdeviceUniqueID, getEndpointUniqueID.
+   * 
+   * @return Endpoint Reference UniqueId
+   */
+  @Deprecated
+  public int getUniqueID() {
+	  return endPointUniqueID;
+  }
   /**
    * Gets the entity name
    *

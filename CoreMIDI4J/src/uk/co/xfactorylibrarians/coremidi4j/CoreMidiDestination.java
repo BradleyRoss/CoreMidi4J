@@ -37,7 +37,7 @@ import javax.sound.midi.Transmitter;
 
 public class CoreMidiDestination implements MidiDevice {
 
-  private final CoreMidiDeviceInfo info;
+  private CoreMidiDeviceInfo info;
   private final AtomicBoolean isOpen;  // Tracks whether we are connected to CoreMIDI and can be used
   private final AtomicLong startTime;  // The system time in microseconds when the port was opened
   private final Set<CoreMidiReceiver> receivers;
@@ -74,6 +74,7 @@ public class CoreMidiDestination implements MidiDevice {
 
   /**
    * Changes the MIDI Info object; can only be done by this package as a result of a MIDI environment change event.
+   * @param info CoreMidiDeviceInfo object
    */
   void updateDeviceInfo(CoreMidiDeviceInfo info) {
 

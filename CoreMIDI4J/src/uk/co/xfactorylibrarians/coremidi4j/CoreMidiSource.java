@@ -81,6 +81,7 @@ public class CoreMidiSource implements MidiDevice {
 
   /**
    * Changes the MIDI Info object; can only be done by this package as a result of a MIDI environment change event.
+   * @param info CoreMidiDeviceInfo object
    */
   void updateDeviceInfo(CoreMidiDeviceInfo info) {
 

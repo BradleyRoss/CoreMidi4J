@@ -3,7 +3,7 @@
 # methods.
 #
 # It also appears that getUniqueID has been replaced by
-# getdeviceUniqueID, getEnpointUniqueID
+# getdeviceUniqueID, getEndpointUniqueID in CoreMidiDeviceProvider
 #
 javah -classpath ./target/classes \
     -o ./CoreMidi4J.h \
